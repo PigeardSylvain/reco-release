@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Recommandations accessibilité Orange</title>
+    
+
+      <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeHelvetica.css">
+      <!-- Copyright © 2016 Orange SA. All rights reserved -->
+      <link rel="stylesheet" href="../boosted/css/orangeIcons.css">
+      <link rel="stylesheet" href="../boosted/css/boosted.css">
+
+      <!-- Style pour la mise en forme des exemples de code -->
+      <link rel="stylesheet" href="/css/dark.min.css">
+
+      <!-- Styles perso -->
+      <link rel="stylesheet" href="../css/reco.css">
+      <link rel="stylesheet" href="./css/reco-custom.css">
+
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/jquery.validate.min.js"></script>
+      <script src="./js/lunr.min.js"></script>
+      <script src="./js/lunr.stemmer.support.js"></script>
+      <script src="./js/lunr.fr.min.js"></script>      
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" href="/images/favicon.ico">            
+</head>
+<body>
+    <div class="skip-links sr-only">
+        <a id="skip-nav" href="#sidebar">Aller à la navigation</a>
+        <a id="skip-content" href="#content">Aller au contenu</a>
+    </div>
+    <header role="banner">
+      <nav class="navbar navbar-dark navbar-fixed-top">
+          <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="sr-only">Menu de navigation</span>
+              <span class="icon-menu"></span>
+          </button>
+          
+              <a href="index.html" class="navbar-brand"><img src="../boosted/img/ORANGE_LOGO_rgb.jpg" alt="Retour à l'accueil" title="Retour à l'accueil"/></a>
+              <ul class="nav navbar-nav collapse navbar-toggleable-xs pull-xs-left" id="collapsingNavbar">
+                  <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>                                    
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Site Web</a>
+                      <ul id="navigation" class="nav navbar-nav">
+                        <li><a class="page-index" href="index.html">Présentation</a></li>
+                        <li><a class="page-incontournables" href="incontournables.html">Critères incontournables</a></li>
+                        <li><a class="page-exigences" href="exigences.html">Référentiels complets</a></li>
+                        <li><a class="page-htmlaria" href="htmlaria.html"><abbr>HTML5</abbr> & <abbr >ARIA</abbr></a></li>
+                        <li><a class="page-captcha" href="captcha.html">CAPTCHA et accessibilité</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Exemples</a></li>
+                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>
+                        <li><a class="page-methodes-outils" href="methodes-outils.html">Méthodes et outils de test</a></li>
+                        <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li>
+                        <li><a class="page-contact" href="contact.html">Contact</a></li>
+                        <li><a class="page-about" href="about.html">À propos</a></li>
+                    </ul>                    
+                  </li>
+                  <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Application mobile</a></li>
+                  <li class="nav-item"><a href="../others/index.html" class="nav-link">Contenu éditorial</a></li>
+                  <li class="nav-item language hidden-sm-up">
+                    <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a>
+                  </li>
+              </ul> 
+              <ul class="nav navbar-nav pull-xs-right" id="secondNavBar">        
+                <li class="nav-item hidden-xs-down">
+                  <span id="cdu">
+                    <a href="http://confort-plus.orange.com/" target="_blank" 
+                      title="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)" 
+                      aria-label="Découvrir Confort + : extension navigateur permettant d'adapter le confort de lecture lors de la consultation d'un site web (nouvelle fenêtre)">
+                      Découvrir Confort
+                      <span>+</span>
+                    </a>
+                  </span>
+                </li>                  
+                <li class="nav-item language hidden-xs-down">
+                  <a href="#" class="nav-link active" aria-disabled="true" aria-label="version française">fr</a><a lang="en" aria-label="english version" href="../web_EN/index.html" class="nav-link">en</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#searchbar" class="nav-link icon" id="searchIcon" data-toggle="collapse" aria-expanded="false" aria-controls="searchbar">
+                        <span class="sr-only">Afficher la barre de recherche</span>
+                        <span class="icon-search" aria-hidden="true"></span>
+                    </a>                    
+                </li>                
+            </ul>             
+          
+          <form action="./search.html" class="navbar-form navbar-right collapse" role="search" id="searchbar">
+            <label for="search">Rechercher</label>
+            <input placeholder="Saisissez votre recherche" type="text" id="search" name="q">
+            <button type="submit" class="btn btn-secondary icon">
+              <span class="sr-only">Rechercher</span>
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+          </form>
+      </nav>      
+    </header>
+
+    <nav>
+      <span class="sr-only">Vous êtes ici&nbsp;: </span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/web/index.html">Site Web</a></li>        
+      </ol>
+    </nav>
+
+    <main role="main" class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">       
+        <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        </div>
+        <div class="col-xs-12 col-sm-9" id="content">          
+          <h1 id="liste-des-exemples">Liste des exemples</h1>
+<script>$(document).ready(function () {
+    setBreadcrumb([{"label":"Exemples"}]);
+});</script>
+
+<h2 id="les-bases">Les bases</h2>
+<ul class="examples-list">
+    <li>
+        <a href="exemples/masquage/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/masquage.png"><span>Masquage accessible</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/formulaire/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/formulaire.png"><span>Gestion des formulaires</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/zoom/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/zoom.png"><span>Gestion du zoom, agrandissement de la taille du texte</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/prix/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/prix.png"><span>Affichage et vocalisation des prix</span>
+        </a>
+    </li>
+</ul>
+
+<h2 id="niveau-interm-diaire">Niveau intermédiaire</h2>
+<ul class="examples-list">
+    <li>
+        <a href="exemples/landmarks/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/landmarks.png"><span>Les régions ARIA</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/role-dialog/role-dialog.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/dialog1.png"><span>Les boîtes de dialogue 1/2</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/role-dialog2/role-dialog.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/dialog2.png"><span>Les boîtes de dialogue 2/2</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/simple-menu/simple-menu.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/menu.png"><span>Menu déroulant</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/speak/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/speak.png"><span>Faire parler le lecteur d’écran via Javascript</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/tag/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Créer des «&nbsp;tags&nbsp;» accessibles 1/2</span>
+        </a>
+    </li>
+        <li>
+        <a href="exemples/tag-exemples/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/tag.png"><span>Créer des «&nbsp;tags&nbsp;» accessibles 2/2 (exemples)</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/iframes-techniques/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/speak.png"><span>Les iframes «&nbsp;techniques&nbsp;»</span>
+        </a>
+    </li>
+</ul>
+
+<h2 id="niveau-avanc-">Niveau avancé</h2>
+<ul class="examples-list">
+    <li>
+        <a href="label-ledby-describedby.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/aria.png"><span>Les attributs ARIA qui peuvent vous sauver</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/listbox/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/listbox.png"><span>Les listes <abbr>ARIA</abbr> (listbox) 1/3</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/check-listbox/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/listbox2.png"><span>Les listes <abbr>ARIA</abbr> (listbox) 2/3 (avec cases à cocher)</span>
+        </a>
+    </li> 
+    <li>
+        <a href="exemples/listbox-pattern-aria/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/listbox3.png"><span>Les <i lang="en">listbox</i> et <i lang="en">patterns</i> <abbr>ARIA</abbr> 3/3 (navigation au clavier)</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/files/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/cloud.png"><span>Explorateur de fichiers (<i lang="en">cloud</i>)</span>
+        </a>
+    </li>
+    <li>
+        <a href="exemples/dynFocus/index.html">
+            <img class="hidden-sm-down" alt="" src="./images/exemples/live-region.png"><span>Les régions vivantes (<i lang="en">live regions</i>), contenu dynamique, gestion du focus et <abbr>ARIA</abbr></span>
+        </a>
+    </li>
+</ul>
+<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+ Copyright (C) 2016  Orange SA
+ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+          
+        </div>
+      </div>
+    </main>
+
+    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="../boosted/js/boosted.min.js"></script>
+    <script type="text/javascript" src="../js/reco.js"></script>
+    <script type="text/javascript" src="../../../js/highlight.min.js"></script>    
+</body>
+</html>
