@@ -51,13 +51,11 @@
                         <li><a class="page-index" href="index.html">Présentation</a></li>
                         <li><a class="page-incontournables" href="incontournables.html">Critères incontournables</a></li>
                         <li><a class="page-exigences" href="exigences.html">Référentiels complets</a></li>
-                        <li><a class="page-captcha" href="captcha.html">CAPTCHA et accessibilité</a></li>
-                        <li><a class="page-exemples" href="exemples.html">Exemples</a></li>
-                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>
                         <li><a class="page-methodes-outils" href="methodes-outils.html">Méthodes et outils de test</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Techniques</a></li>
+                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>                        
                         <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li>
-                        <li><a class="page-contact" href="contact.html">Contact</a></li>
-                        <li><a class="page-about" href="about.html">À propos</a></li>
+                        <li><a class="page-about" href="about.html">À propos / Contact</a></li>
                     </ul>                    
                   </li>
                   <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Application mobile</a></li>
@@ -111,14 +109,28 @@
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <h1 id="votre-avis-compte">Votre avis compte</h1>
+          <h1 id="-viter-les-captcha">Éviter les captcha</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Contact"}]);
+    setBreadcrumb([
+        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Éviter les captcha"}
+    ]);
 });</script>
 
-<p>Vous avez une remarque, une suggestion à apporter&nbsp;?</p>
-<p>Vérifiez que ceci n’a pas déjà été remonté par quelqu’un d’autre en consultant <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">la liste des «&nbsp;<i lang="en">issues</i>&nbsp;»</a> sur notre compte github.<br>Si vous ne trouvez rien concernant votre remarque, <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new">adressez-nous votre commentaire</a> via github.</p>
-<p>&nbsp;</p>
+<p><span data-menuitem="incontournables"></span></p>
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur&nbsp;: </p>
+<ul>
+<li>Double authentification</li>
+<li>Champ de formulaire caché à laisser vide (technique du <span lang="en">honeypot</span>), non-visibles pour l’utilisateur</li>
+<li>Mise à disposition d’un support téléphonique afin de s’assurer que le client est une vraie personne</li>
+<li>Un contrôle permettant de s’assurer qu’une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> ne tente pas de soumettre le formulaire plus de N fois par seconde.</li>
+</ul>
+<p>Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha&nbsp;: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel classique...</p>
+<p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a></li>
+</ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->

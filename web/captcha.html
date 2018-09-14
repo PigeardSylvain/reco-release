@@ -51,13 +51,11 @@
                         <li><a class="page-index" href="index.html">Présentation</a></li>
                         <li><a class="page-incontournables" href="incontournables.html">Critères incontournables</a></li>
                         <li><a class="page-exigences" href="exigences.html">Référentiels complets</a></li>
-                        <li><a class="page-captcha" href="captcha.html">CAPTCHA et accessibilité</a></li>
-                        <li><a class="page-exemples" href="exemples.html">Exemples</a></li>
-                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>
                         <li><a class="page-methodes-outils" href="methodes-outils.html">Méthodes et outils de test</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Techniques</a></li>
+                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>                        
                         <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li>
-                        <li><a class="page-contact" href="contact.html">Contact</a></li>
-                        <li><a class="page-about" href="about.html">À propos</a></li>
+                        <li><a class="page-about" href="about.html">À propos / Contact</a></li>
                     </ul>                    
                   </li>
                   <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Application mobile</a></li>
@@ -111,44 +109,24 @@
         <div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
         </div>
         <div class="col-xs-12 col-sm-9" id="content">          
-          <h1 id="-viter-les-captcha">Éviter les captcha</h1>
+          <h1 id="les-captchas-et-l-accessibilit-">Les CAPTCHAs et l&#39;accessibilité</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
-        {"label":"Éviter les captcha"}
-    ]);
+            {"label":"Techniques", "url":"exemples.html"},
+            {"label":"CAPTCHA et accessibilité"}
+        ]);
 });</script>
 
-<p><span data-menuitem="incontournables"></span></p>
-<p><strong>Cible&nbsp;:</strong> tout le monde en particulier, les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur&nbsp;: </p>
-<ul>
-<li>Double authentification</li>
-<li>Champ de formulaire caché à laisser vide (technique du <span lang="en">honeypot</span>), non-visibles pour l’utilisateur</li>
-<li>Mise à disposition d’un support téléphonique afin de s’assurer que le client est une vraie personne</li>
-<li>Un contrôle permettant de s’assurer qu’une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> ne tente pas de soumettre le formulaire plus de N fois par seconde.</li>
-</ul>
-<p>Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une  combinaison de captcha&nbsp;: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test  mathématique simple…) + captcha visuel classique...</p>
-<p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
-<ul>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a></li>
-</ul>
-<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
- Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-          
-        </div>
-      </div>
-    </main>
-
-    <a aria-hidden="true" id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Retour en haut de page" data-toggle="tooltip" data-placement="left"></a>
-        
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-    <script src="../boosted/js/boosted.min.js"></script>
-    <script type="text/javascript" src="../js/reco.js"></script>
-    <script type="text/javascript" src="../../../js/highlight.min.js"></script>    
-</body>
-</html>cocher du point de vue de l’utilisateur. Celui-ci utilise des données annexes telles que la résolution de l’écran, le déplacement du pointeur de la souris ou le temps de saisie d&#39;un formulaire…etc.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Un CAPTCHA (« Completely Automated Public Turing-test to tell Computers and Humans Apart », en français  « Test public de Turing complètement automatisé pour différencier les humains des ordinateurs ») est un test destiné à différencier un utilisateur d’un programme informatique. Il est utilisé notamment sur les formulaires pour se prémunir du SPAM.</p>
+<p>Il existe différents types de CAPTCHA, les plus nombreux sont les CAPTCHAs visuels où on demande à l’utilisateur de saisir une série de lettres déformées affichées à l’écran.</p>
+<p><img src="./images/captchas/captcha.png" alt="Capture d&#39;écran d&#39;un captcha visuel"><br><strong>Exemple de CAPTCHA visuel</strong></p>
+<h2 id="premier-constat-le-captcha-et-les-utilisateurs">Premier constat : le Captcha et les utilisateurs</h2>
+<p>Les CAPTCHAs posent souvent des difficultés même pour les utilisateurs les plus aguerris. En effet il est souvent nécessaire d’effectuer plusieurs tentatives avant de répondre correctement à un CAPTCHA. Pour certains utilisateurs la présence d’un CAPTCHA est tout simplement rédhibitoire. Par exemple, un utilisateur non-voyant ne peut pas renseigner un CAPTCHA visuel. Même si certains sites proposent des alternatives, comme un CAPTCHA audio en plus d’un CAPTCHA visuel, dans les faits c’est rarement concluant. C&#39;est d&#39;ailleurs la première source de difficultés citée par les utilisateurs malvoyants d&#39;après <a href="https://webaim.org/projects/screenreadersurvey7">le sondage réalisé par le site WebAIM fin 2017</a> :<br><img src="./images/captchas/webaim.png" alt="Graphique issu du sondage webAIM 2017 montrant que les captcha sont la première source de problème">  </p>
+<p><strong>Les CAPTCHA pointés du doigt par les utilisateurs malvoyants (sondage WebAIM 2017)</strong></p>
+<p>L’explosion des moyens de calcul permet aux bots et autres programmes informatiques d’être de plus en plus performants. Il est aujourd’hui simple de concevoir un programme permettant de deviner le texte inscrit dans une image ou vocalisé dans un fichier audio.
+Pour que le CAPTCHA reste efficace vis-à-vis des bots, il est donc nécessaire d’accentuer la déformation de l’image ou du son proposé par le CAPTCHA : cela accentue d’autant les difficultés pour l’utilisateur.</p>
+<p>C’est pourquoi Google tente de trouver des alternatives pour différencier un utilisateur humain d’un robot. Ils proposent le « No Captcha », une simple case à cocher du point de vue de l’utilisateur. Celui-ci utilise des données annexes telles que la résolution de l’écran, le déplacement du pointeur de la souris ou le temps de saisie d&#39;un formulaire…etc.</p>
 <p><img src="./images/captchas/nocaptcha.png" alt="Capture d&#39;écran du no captcha de google"><br><strong>No CAPTCHA de Google</strong></p>
 <p>Bien que cette solution soit plus efficace, elle n’est pas aujourd’hui satisfaisante en termes d’accessibilité car en cas de doute, un CAPTCHA standard est affiché à l’écran. C’est souvent le cas pour un utilisateur qui ne peut pas utiliser une souris et qui navigue au clavier ou pour un utilisateur qui navigue à l’aide d’un lecteur d’écran (cas des personnes malvoyantes). Il faut donc toujours proposer un moyen de contact alternatif (email, téléphone….) dans le cas où le CAPTCHA ne pourrait pas être renseigné.</p>
 <p>Entre les utilisateurs qui ne peuvent pas saisir le CAPTCHA, ceux qui n’y arrivent et ceux qui ne comprennent pas ce qu’il faut faire, la mise en place d’un CAPTCHA n’est pas anodine pour l’audience d’un site. Partant du principe que les CAPTCHAs posent des difficultés à de nombreux utilisateurs, la première recommandation est donc de <strong>ne pas utiliser de CAPTCHA</strong>.</p>

@@ -51,13 +51,11 @@
                         <li><a class="page-index" href="index.html">Présentation</a></li>
                         <li><a class="page-incontournables" href="incontournables.html">Critères incontournables</a></li>
                         <li><a class="page-exigences" href="exigences.html">Référentiels complets</a></li>
-                        <li><a class="page-captcha" href="captcha.html">CAPTCHA et accessibilité</a></li>
-                        <li><a class="page-exemples" href="exemples.html">Exemples</a></li>
-                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>
                         <li><a class="page-methodes-outils" href="methodes-outils.html">Méthodes et outils de test</a></li>
+                        <li><a class="page-exemples" href="exemples.html">Techniques</a></li>
+                        <li><a class="page-orange-boosted" href="orange-boosted.html">Orange Boosted</a></li>                        
                         <li><a class="page-confort-plus" href="confort-plus.html">Confort+</a></li>
-                        <li><a class="page-contact" href="contact.html">Contact</a></li>
-                        <li><a class="page-about" href="about.html">À propos</a></li>
+                        <li><a class="page-about" href="about.html">À propos / Contact</a></li>
                     </ul>                    
                   </li>
                   <li class="nav-item mobile"><a href="../mobile/index.html" class="nav-link">Application mobile</a></li>
@@ -148,7 +146,10 @@
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="les-captchas-et-l-accessibilit-">Les CAPTCHAs et l&#39;accessibilité</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"CAPTCHA et accessibilité"}]);
+    setBreadcrumb([
+            {"label":"Techniques", "url":"exemples.html"},
+            {"label":"CAPTCHA et accessibilité"}
+        ]);
 });</script>
 
 <h2 id="introduction">Introduction</h2>
@@ -334,7 +335,7 @@ Certains points déjà présents dans la charte Orange (utilisation des couleurs
 <ul>
 <li><a href="equivalent-textuel.html">Fournir un équivalent textuel pour les images et les cadres</a></li>
 <li><a href="audio-video.html">Rendre accessible les pistes audio ou vidéo</a></li>
-<li><a href="captcha.html">Éviter les captcha</a></li>
+<li><a href="crit-captcha.html">Éviter les captcha</a></li>
 </ul>
 <h2 id="couleurs-et-contrastes">Couleurs et contrastes</h2>
 <p>S&#39;assurer que les couleurs utilisés ne posent pas de problème à l&#39;utilisateur</p>
@@ -2708,9 +2709,9 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="liste-des-exemples">Liste des exemples</h1>
+<h1 id="techniques-pour-la-mise-en-place-de-l-accessibilit-">Techniques pour la mise en place de l&#39;accessibilité</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Exemples"}]);
+    setBreadcrumb([{"label":"Techniques"}]);
 });</script>
 
 <style>
@@ -2719,8 +2720,10 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
 </style>
 
 <dl>
+    <dt><a href="captcha.html">Les CAPTCHAs</a></dt>
+    <dd>Les CAPTCHAs et l'accessibilité</dd>
     <dt><a href="exemples/masquage/index.html">Masquage accessible</a></dt>
-    <dd>Des éléments non-visibles à l'écran mais accessibles aux outils d'assistances.</dd>
+    <dd>Créer des éléments non-visibles à l'écran mais accessibles aux outils d'assistances.</dd>
     <dt><a href="exemples/formulaire/index.html">Gestion des formulaires</a><dt>
     <dd>Exemple de formulaire accessible.</dd>
     <dt><a href="exemples/zoom/index.html">Gestion du zoom, agrandissement de la taille du texte</a><dt>
@@ -2761,25 +2764,17 @@ Plus d’information dans la rubrique <strong>exemples</strong>&nbsp;: <a href="
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="votre-avis-compte">Votre avis compte</h1>
+<h1 id="-propos">À propos</h1>
 <script>$(document).ready(function () {
-    setBreadcrumb([{"label":"Contact"}]);
-});</script>
-
-<p>Vous avez une remarque, une suggestion à apporter&nbsp;?</p>
-<p>Vérifiez que ceci n’a pas déjà été remonté par quelqu’un d’autre en consultant <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">la liste des «&nbsp;<i lang="en">issues</i>&nbsp;»</a> sur notre compte github.<br>Si vous ne trouvez rien concernant votre remarque, <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new">adressez-nous votre commentaire</a> via github.</p>
-<p>&nbsp;</p>
-<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
- Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
-<h1 id="a-propos">A propos</h1>
-<script>$(document).ready(function () {
-    setBreadcrumb([{"label":"A propos"}]);
+    setBreadcrumb([{"label":"À propos / Contact"}]);
 });</script>
 
 <p>Documentation sous <a href="https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE">licence CC BY SA 3.0</a>. Le code source de ce site ainsi que celui des exemples est disponible <a href="https://github.com/Orange-OpenSource/a11y-guidelines">sur notre compte github</a>.  </p>
 <p>Le logo Orange ainsi que certaines images et captures sont la propriété d&#39;Orange:  </p>
 <p>Copyright (C) 2016 Orange SA All rights reserved<br><a href="/NOTICE.txt">Liste des fichiers concernés</a></p>
+<h1 id="contact">Contact</h1>
+<p>Vous avez une remarque, une suggestion à apporter&nbsp;?</p>
+<p>Vérifiez que ceci n’a pas déjà été remonté par quelqu’un d’autre en consultant <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">la liste des «&nbsp;<i lang="en">issues</i>&nbsp;»</a> sur notre compte github.<br>Si vous ne trouvez rien concernant votre remarque, <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new">adressez-nous votre commentaire</a> via github.</p>
 <p>&nbsp;</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
