@@ -51,18 +51,18 @@ index.add({
     body: "### Méthodes et outils de test Pour ceux qui veulent vérifier l’accessibilité de leurs pages avec des outils plus ou moins automatiques. Enfin, tout l’outillage méthodologique et technique pour évaluer ses pages.  "
 });
 
+documentTitles["index.html#techniques"] = "Techniques";
+index.add({
+    url: "index.html#techniques",
+    title: "Techniques",    
+    body: "### Techniques Des exemples didactiques pour certains types de composants ou d’éléments d’interface  particulièrement délicats à rendre accessibles et fréquemment utilisés. Tout y est expliqué, il n’y a plus qu’à se laisser guider&amp;nbsp;!  Ces exemples utilisent la librairie [Boosted](http://boosted.orange.com/). Cette librairie basée sur [Bootstrap](http://getbootstrap.com/) permet de réaliser rapidement un site web responsive et accessible aux couleurs de la charte Orange.  "
+});
+
 documentTitles["index.html#outils-orange-open-source"] = "Outils Orange open source";
 index.add({
     url: "index.html#outils-orange-open-source",
     title: "Outils Orange open source",    
-    body: "### Outils Orange open source Présentation de la bibliothèque Boosted et du service Confort+.  "
-});
-
-documentTitles["index.html#exemples"] = "Exemples";
-index.add({
-    url: "index.html#exemples",
-    title: "Exemples",    
-    body: "### Exemples Des exemples didactiques pour certains types de composants ou d’éléments d’interface  particulièrement délicats à rendre accessibles et fréquemment utilisés. Tout y est expliqué, il n’y a plus qu’à se laisser guider&amp;nbsp;!  Ces exemples utilisent la librairie [Boosted](http://boosted.orange.com/). Cette librairie basée sur [Bootstrap](http://getbootstrap.com/) permet de réaliser rapidement un site web responsive et accessible aux couleurs de la charte Orange.  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "### Outils Orange open source Présentation de la bibliothèque Boosted et du service Confort+.  &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 

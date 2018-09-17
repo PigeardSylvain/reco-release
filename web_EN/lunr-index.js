@@ -57,11 +57,11 @@ index.add({
     body: "### Open source Orange tools Presentation of the Boosted library and the Comfort+ service.  "
 });
 
-documentTitles["index.html#examples"] = "Examples";
+documentTitles["index.html#techniques"] = "Techniques";
 index.add({
-    url: "index.html#examples",
-    title: "Examples",    
-    body: "### Examples Didactic examples for certain types of components or elements of the user interface particularly difficult to make accessible but frequently used. Everything is explained, just go ahead!  These examples use the [Boosted](http://boosted.orange.com/) library. It is based on [Bootstrap](http://getbootstrap.com/) and lets you create and quickly test the accessibility and responsiveness of a website. This library is branded with the Orange colours.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    url: "index.html#techniques",
+    title: "Techniques",    
+    body: "### Techniques Didactic examples for certain types of components or elements of the user interface particularly difficult to make accessible but frequently used. Everything is explained, just go ahead!  These examples use the [Boosted](http://boosted.orange.com/) library. It is based on [Bootstrap](http://getbootstrap.com/) and lets you create and quickly test the accessibility and responsiveness of a website. This library is branded with the Orange colours.  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
