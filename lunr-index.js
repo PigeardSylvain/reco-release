@@ -286,7 +286,14 @@ documentTitles["about.html#recommandations-accessibilite-orange"] = "Recommandat
 index.add({
     url: "about.html#recommandations-accessibilite-orange",
     title: "Recommandations accessibilité Orange",    
-    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;À propos&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;À propos\&quot;}]); });&lt;/script&gt;  Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE). Le code source de ce site ainsi que celui des exemples est disponible [sur notre compte github](https://github.com/Orange-OpenSource/a11y-guidelines).    Le logo Orange ainsi que certaines images et captures sont la propriété d'Orange&amp;nbsp;:    &lt;span lang=\&quot;en\&quot;&gt;Copyright (C) 2016 Orange SA All rights reserved&lt;/span&gt;   [Liste des fichiers concernés](/NOTICE.txt)  &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
+    body: "# Recommandations accessibilité Orange &lt;h2 class=\&quot;page-title\&quot;&gt;À propos&lt;/h2&gt;  &lt;script&gt;$(document).ready(function () {     setBreadcrumb([{\&quot;label\&quot;:\&quot;À propos\&quot;}]); });&lt;/script&gt;  Documentation sous [licence CC BY SA 3.0](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE). Le code source de ce site ainsi que celui des exemples est disponible [sur notre compte github](https://github.com/Orange-OpenSource/a11y-guidelines).    Le logo Orange ainsi que certaines images et captures sont la propriété d'Orange&amp;nbsp;:    &lt;span lang=\&quot;en\&quot;&gt;Copyright (C) 2016 Orange SA All rights reserved&lt;/span&gt;   [Liste des fichiers concernés](/NOTICE.txt)  "
+});
+
+documentTitles["about.html#gestion-des-cookies"] = "Gestion des cookies";
+index.add({
+    url: "about.html#gestion-des-cookies",
+    title: "Gestion des cookies",    
+    body: "## Gestion des cookies  Vous pouvez modifier à tous moments vos préférences directement depuis le &lt;a role=\&quot;button\&quot; href=\&quot;javascript:tarteaucitron.userInterface.openPanel();\&quot;&gt;panneau de gestion des cookies&lt;/a&gt;. &amp;nbsp; &lt;!--  This file is part of a11y-guidelines | Our vision of mobile &amp; web accessibility guidelines and best practices, with valid/invalid examples.  Copyright (C) 2016  Orange SA  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --&gt;"
 });
 
 
