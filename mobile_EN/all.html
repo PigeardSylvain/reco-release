@@ -1352,7 +1352,7 @@ float heightVal;
   yVal = myLabel.accessibilityFrame.origin.y;
   widthVal = myLabel.accessibilityFrame.size.width;
   heightVal = myLabel.accessibilityFrame.size.height;</code></pre><p>  }</p>
-<p>  //Première façon d&#39;augmenter la zone de focus.
+<p>  //Première façon d'augmenter la zone de focus.
   @IBAction func clicHere(_ sender: UIButton) {</p>
 <pre><code>  myLabel.accessibilityFrame = CGRect.init(x: xVal,
                                            y: yVal,
@@ -1360,7 +1360,7 @@ float heightVal;
                                            height: heightVal + 100.0)
 
   UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel)</code></pre><p>  }</p>
-<p>  //Seconde façon d&#39;augmenter la zone de focus (Bézier).
+<p>  //Seconde façon d'augmenter la zone de focus (Bézier).
   @IBAction func clic(_ sender: UIButton) {</p>
 <pre><code>  let bezierPath = UIBezierPath.init()
 

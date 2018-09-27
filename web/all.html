@@ -248,6 +248,29 @@ Comme il est précisé dans <a href="https://www.accede-web.com/notices/graphiqu
 <h1 id="liste-des-crit-res-wcag-par-th-me">Liste des critères WCAG par thème</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([{"label":"Critères WCAG par thème"}]);
+    addSubMenu([
+        {
+            "label":"Concepteurs", "url":"", "expanded":false, "itemsQuery":"#incontournables-concepteurs h2", "className": "menuitem-conception",
+            "onExpand": function () {
+                $("#incontournables-concepteurs-tab").tab("show");
+            }
+        },
+        {
+            "label":"Développeurs", "url":"", "expanded":false, "itemsQuery":"#incontournables-developpeurs h2", "className": "menuitem-development",
+            "onExpand": function () {
+                $("#incontournables-developpeurs-tab").tab("show");
+            }
+        }
+    ]);
+    $("#incontournables-concepteurs-tab").on("click", function() {
+        expandCollapse($("#left-navigation .menuitem-conception"));
+    })
+    $("#incontournables-developpeurs-tab").on("click", function() {
+        expandCollapse($("#left-navigation .menuitem-development"));
+    })
+    if (window.location.hash == "#dev") {
+        $("#incontournables-developpeurs-tab").trigger("click");
+    }
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
@@ -323,74 +346,91 @@ Certains points déjà présents dans la charte Orange (utilisation des couleurs
 </ul>
 </div>
 <div class="tab-pane" id="incontournables-developpeurs" role="tabpanel" aria-labelledby="incontournables-developpeurs-tab">
+<h2 id="dev-contenu-textuel">Contenu textuel</h2>
 
-<h2 id="contenu-textuel">Contenu textuel</h2>
 <p>S&#39;assurer que les contenus textuels soient structurés avec la sémantique appropriée</p>
 <ul>
-<li><a href="inc-dev-titre-pages.html">Donner un titre aux pages</a></li>
-<li><a href="inc-dev-titre-rubriques.html">Donner des titres aux rubriques</a></li>
-<li><a href="inc-dev-semantique-html.html">Respecter la sémantique HTML</a></li>
-<li><a href="inc-dev-changement-langue.html">Indiquer la langue principale et les changements de langue</a></li>
-<li><a href="inc-dev-tableaux.html">Structurer les tableaux de données</a></li>
+    <li>[Donner un titre aux pages](inc-dev-titre-pages.html)</li>
+    <li>[Donner des titres aux rubriques](inc-dev-titre-rubriques.html)</li>
+    <li>[Respecter la sémantique HTML](inc-dev-semantique-html.html)</li>
+    <li>[Indiquer la langue principale et les changements de langue](inc-dev-changement-langue.html)</li>
+    <li>[Structurer les tableaux de données](inc-dev-tableaux.html)</li>
 </ul>
-<h2 id="contenu-non-textuel">Contenu non-textuel</h2>
+
+<h2 id="dev-contenu-non-textuel">Contenu non-textuel</h2>
+
 <p>S&#39;assurer, qu&#39;une alternative aux contenus non-textuels soit proposée à l&#39;utilisateur</p>
 <ul>
-<li><a href="inc-dev-equivalent-textuel.html">Fournir un équivalent textuel pour les images et les cadres</a></li>
-<li><a href="inc-dev-audio-video.html">Rendre accessible les pistes audio ou vidéo</a></li>
-<li><a href="inc-dev-crit-captcha.html">Éviter les captcha</a></li>
+    <li>[Fournir un équivalent textuel pour les images et les cadres](inc-dev-equivalent-textuel.html)</li>
+    <li>[Rendre accessible les pistes audio ou vidéo](inc-dev-audio-video.html)</li>
+    <li>[Éviter les captcha](inc-dev-crit-captcha.html)</li>
 </ul>
-<h2 id="couleurs-et-contrastes">Couleurs et contrastes</h2>
+
+<h2 id="dev-couleurs-et-contrastes">Couleurs et contrastes</h2>
+
 <p>S&#39;assurer que les couleurs utilisés ne posent pas de problème à l&#39;utilisateur</p>
 <ul>
-<li><a href="inc-dev-contrastes.html">Assurer un contraste suffisant entre texte et fond</a></li>
-<li><a href="inc-dev-information-sensorielle.html">Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information</a></li>
+    <li>[Assurer un contraste suffisant entre texte et fond](inc-dev-contrastes.html)</li>
+    <li>[Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information](inc-dev-information-sensorielle.html)</li>
 </ul>
-<h2 id="navigation-g-n-rale">Navigation générale</h2>
+
+<h2 id="dev-navigation-generale">Navigation générale</h2>
+
 <p>S&#39;assurer que l&#39;utilisateur navigue facilement dans une page et plus globalement dans un site</p>
 <ul>
-<li><a href="inc-dev-intitules-hors-contexte.html">Rendre les intitulés des liens et des boutons compréhensibles hors contexte</a></li>
-<li><a href="inc-dev-nouvelle-fenetre.html">Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre</a></li>
-<li><a href="inc-dev-liens-evitement.html">Fournir des liens d’évitement</a></li>
-<li><a href="inc-dev-controle-interactions.html">S’assurer que l’utilisateur garde le contrôle lors des interactions</a></li>
-<li><a href="inc-dev-acces-multiples.html">Fournir des accès multiples et une localisation</a></li>
-<li><a href="inc-dev-message-contextuel.html">Permettre de connaître le résultat d&#39;une interaction utilisateur à l&#39;aide de messages contextuels</a></li>
-<li><a href="inc-dev-controle-animations.html">Permettre le contrôle des animations</a></li>
+    <li>[Rendre les intitulés des liens et des boutons compréhensibles hors contexte](inc-dev-intitules-hors-contexte.html)</li>
+    <li>[Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre](inc-dev-nouvelle-fenetre.html)</li>
+    <li>[Fournir des liens d’évitement](inc-dev-liens-evitement.html)</li>
+    <li>[S’assurer que l’utilisateur garde le contrôle lors des interactions](inc-dev-controle-interactions.html)</li>
+    <li>[Fournir des accès multiples et une localisation](inc-dev-acces-multiples.html)</li>
+    <li>[Permettre de connaître le résultat d'une interaction utilisateur à l'aide de messages contextuels](inc-dev-message-contextuel.html)</li>
+    <li>[Permettre le contrôle des animations](inc-dev-controle-animations.html)</li>
 </ul>
-<h2 id="navigation-clavier">Navigation clavier</h2>
+
+<h2 id="dev-navigation-clavier">Navigation clavier</h2>
+
 <p>S&#39;assurer que l&#39;utilisateur puisse naviguer uniquement à l&#39;aide du clavier</p>
 <ul>
-<li><a href="inc-dev-utilisation-clavier.html">Permettre d’utiliser les principales fonctionnalités de l’application au clavier</a></li>
-<li><a href="inc-dev-parcours-focus.html">Rendre le parcours du focus séquentiel et logique sans piège clavier</a></li>
-<li><a href="inc-dev-visibilite-focus.html">Rendre visible le focus en toute circonstance</a></li>
+    <li>[Permettre d’utiliser les principales fonctionnalités de l’application au clavier](inc-dev-utilisation-clavier.html)</li>
+    <li>[Rendre le parcours du focus séquentiel et logique sans piège clavier](inc-dev-parcours-focus.html)</li>
+    <li>[Rendre visible le focus en toute circonstance](inc-dev-visibilite-focus.html)</li>
 </ul>
-<h2 id="mise-en-page">Mise en page</h2>
+
+<h2 id="dev-mise-en-page">Mise en page</h2>
+
 <p>S&#39;assurer que la mise en page soit adaptée à l&#39;utilisateur.</p>
 <ul>
-<li><a href="inc-dev-adaptatif.html">Utiliser des tailles relatives et faire du web adaptatif</a></li>
-<li><a href="inc-dev-aerer-texte.html">Permettre d&#39;aérer le texte</a></li>
-<li><a href="inc-dev-coherence-navigation.html">Identifier et conserver la cohérence des regroupements et des différentes régions de la page</a></li>
-<li><a href="inc-dev-taille-zones.html">Définir des zones sensibles de taille suffisante</a></li>
+    <li>[Utiliser des tailles relatives et faire du web adaptatif](inc-dev-adaptatif.html)</li>
+    <li>[Permettre d'aérer le texte](inc-dev-aerer-texte.html)</li>
+    <li>[Identifier et conserver la cohérence des regroupements et des différentes régions de la page](inc-dev-coherence-navigation.html)</li>
+    <li>[Définir des zones sensibles de taille suffisante](inc-dev-taille-zones.html)</li>
 </ul>
-<h2 id="formulaires">Formulaires</h2>
+
+<h2 id="dev-formulaires">Formulaires</h2>
+
 <p>S&#39;assurer que l&#39;utilisateur puisse efficacement compléter les formulaires</p>
 <ul>
-<li><a href="inc-dev-etiquette-formulaires.html">Associer une étiquette pertinente à chaque champ de formulaire</a></li>
-<li><a href="inc-dev-identifier-erreurs.html">Détecter, identifier les erreurs et suggérer des corrections</a></li>
+    <li>[Associer une étiquette pertinente à chaque champ de formulaire](inc-dev-etiquette-formulaires.html)</li>
+    <li>[Détecter, identifier les erreurs et suggérer des corrections](inc-dev-identifier-erreurs.html)</li>
 </ul>
-<h2 id="tactile-et-interactions">Tactile et interactions</h2>
+
+<h2 id="dev-tactile-et-interactions">Tactile et interactions</h2>
+
 <p>S&#39;assurer que l&#39;utilisateur garde le contrôle sur les interactions, en particulier tactiles</p>
 <ul>
-<li><a href="inc-dev-autoriser-zoom.html">Autoriser l&#39;utilisation du zoom</a></li>
-<li><a href="inc-dev-annuler-gestuelle.html">Permettre d&#39;annuler le déclenchement des interactions gestuelles</a></li>
-<li><a href="inc-dev-alternative-gestures.html">Proposer une alternative aux gestuelles complexes</a></li>
-<li><a href="inc-dev-orientation-ecran.html">Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</a></li>
+    <li>[Autoriser l'utilisation du zoom](inc-dev-autoriser-zoom.html)</li>
+    <li>[Permettre d'annuler le déclenchement des interactions gestuelles](inc-dev-annuler-gestuelle.html)</li>
+    <li>[Proposer une alternative aux gestuelles complexes](inc-dev-alternative-gestures.html)</li>
+    <li>[Donner accès au contenu quelle que soit l'orientation de l'écran](inc-dev-orientation-ecran.html)</li>
 </ul>
-<h2 id="aides-techniques">Aides techniques</h2>
+
+<h2 id="dev-aides-techniques">Aides techniques</h2>
+
 <p>Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales fonctionnalités de l’application, mais aussi s’assurer pour tous les utilisateurs de l’utilisabilité de l’application</p>
 <ul>
-<li><a href="inc-dev-lecteur-ecran.html">S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran</a></li>
+    <li>[S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran](inc-dev-lecteur-ecran.html)</li>
 </ul>
+
 </div>
 </div>
 
@@ -819,7 +859,7 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
 </ul>
 <p><strong>Exemple valide&nbsp;:</strong>  </p>
 <p>Un titrage de page cohérent et pertinent&nbsp;:</p>
-<p><code>`</code>
+<p>```
 (Titre 1) Accueil - Orange
     (Titre 2) Les actualités
     (Titre 2) La fibre arrive&nbsp;!
@@ -864,7 +904,7 @@ Par ailleurs les zones sensibles doivent être suffisamment espacées les unes d
 <h1 id="fournir-des-acc-s-multiples-et-une-localisation">Fournir des accès multiples et une localisation</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Fournir des accès multiples et une localisation"}
     ]);
 });</script>
@@ -892,7 +932,7 @@ Une application offre un menu de navigation parcellaire et aucun autre moyen pou
 <h1 id="utiliser-des-tailles-relatives-et-faire-du-web-adaptatif">Utiliser des tailles relatives et faire du web adaptatif</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Utiliser des tailles relatives et faire du web adaptatif"}
     ]);
 });</script>
@@ -924,7 +964,7 @@ Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter 
 <h1 id="permettre-d-a-rer-le-texte">Permettre d&#39;aérer le texte</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Permettre d'aérer le texte"}
     ]);
 });</script>
@@ -964,7 +1004,7 @@ Permettre aux personnes déficientes visuelles et cognitives d&#39;améliorer le
 <h1 id="proposer-une-alternative-aux-gestuelles-complexes">Proposer une alternative aux gestuelles complexes</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Proposer une alternative aux gestuelles complexes"}
     ]);
 });</script>
@@ -983,7 +1023,7 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <h1 id="permettre-d-annuler-le-d-clenchement-des-interactions-gestuelles">Permettre d&#39;annuler le déclenchement des interactions gestuelles</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Permettre d'annuler le déclenchement des interactions gestuelles"}
     ]);
 });</script>
@@ -1001,7 +1041,7 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <h1 id="rendre-accessible-les-pistes-audio-ou-vid-o">Rendre accessible les pistes audio ou vidéo</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Rendre accessible les pistes audio ou vidéo"}
     ]);
 });</script>
@@ -1039,7 +1079,7 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <h1 id="autoriser-l-utilisation-du-zoom">Autoriser l&#39;utilisation du zoom</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Autoriser l'utilisation du zoom"}
     ]);
 });</script>
@@ -1053,7 +1093,7 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <h1 id="-viter-les-captcha">Éviter les captcha</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Éviter les captcha"}
     ]);
 });</script>
@@ -1078,7 +1118,7 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <h1 id="indiquer-la-langue-principale-et-les-changements-de-langue">Indiquer la langue principale et les changements de langue</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Indiquer la langue principale et les changements de langue"}
     ]);
 });</script>
@@ -1111,7 +1151,7 @@ Préciser également la langue d’un contenu exprimé dans une langue autre que
 <h1 id="identifier-et-conserver-la-coh-rence-des-regroupements-et-des-diff-rentes-r-gions-de-la-page">Identifier et conserver la cohérence des regroupements et des différentes régions de la page</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Identifier et conserver la cohérence des regroupements et des différentes régions de la page"}
     ]);
 });</script>
@@ -1145,7 +1185,7 @@ Pour donner une structure sémantique aux grandes régions d’une page, on peut
 <h1 id="assurer-un-contraste-suffisant-entre-texte-et-fond">Assurer un contraste suffisant entre texte et fond</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Assurer un contraste suffisant entre texte et fond"}
     ]);
 });</script>
@@ -1186,7 +1226,7 @@ Les éléments graphiques inactifs de la page tels que des boutons font exceptio
 <h1 id="permettre-le-contr-le-des-animations">Permettre le contrôle des animations</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Permettre le contrôle des animations"}
     ]);
 });</script>
@@ -1209,7 +1249,7 @@ Les éléments graphiques inactifs de la page tels que des boutons font exceptio
 <h1 id="s-assurer-que-l-utilisateur-garde-le-contr-le-lors-des-interactions">S’assurer que l’utilisateur garde le contrôle lors des interactions</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"S’assurer que l’utilisateur garde le contrôle lors des interactions"}
     ]);
 });</script>
@@ -1243,7 +1283,7 @@ Donner à tous les utilisateurs la maîtrise des changements de contexte lié à
 <h1 id="fournir-un-quivalent-textuel-pour-les-images-et-les-cadres">Fournir un équivalent textuel pour les images et les cadres</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Fournir un équivalent textuel pour les images et les cadres"}
     ]);
 });</script>
@@ -1286,7 +1326,7 @@ Permettre l’accès à l’information incluse dans une image pour des utilisat
 <h1 id="associer-une-tiquette-pertinente-chaque-champ-de-formulaire">Associer une étiquette pertinente à chaque champ de formulaire</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Associer une étiquette pertinente à chaque champ de formulaire"}
     ]);
 });</script>
@@ -1326,7 +1366,7 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 <h1 id="d-tecter-identifier-les-erreurs-et-sugg-rer-des-corrections">Détecter, identifier les erreurs et suggérer des corrections</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Détecter, identifier les erreurs et suggérer des corrections"}
     ]);
 });</script>
@@ -1357,7 +1397,7 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 <h1 id="ne-pas-utiliser-la-couleur-ou-l-information-sensorielle-comme-seule-source-d-information">Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information"}
     ]);
 });</script>
@@ -1388,7 +1428,7 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 <h1 id="rendre-les-intitul-s-des-liens-et-des-boutons-compr-hensibles-hors-contexte">Rendre les intitulés des liens et des boutons compréhensibles hors contexte</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Rendre les intitulés des liens et des boutons compréhensibles hors contexte"}
     ]);
 });</script>
@@ -1442,7 +1482,7 @@ Expliciter les liens et les boutons permet d’améliorer le référencement nat
 <h1 id="s-assurer-que-les-principales-fonctionnalit-s-sont-utilisables-avec-les-lecteurs-d-cran">S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran"}
     ]);
 });</script>
@@ -1462,7 +1502,7 @@ Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales 
 <h1 id="fournir-des-liens-d-vitement">Fournir des liens d’évitement</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Fournir des liens d’évitement"}
     ]);
 });</script>
@@ -1488,7 +1528,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 <h1 id="permettre-de-conna-tre-le-r-sultat-d-une-interaction-utilisateur-l-aide-de-messages-contextuels">Permettre de connaître le résultat d&#39;une interaction utilisateur à l&#39;aide de messages contextuels</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Permettre de connaître le résultat d'une interaction utilisateur à l'aide de messages contextuels"}
     ]);
 });</script>
@@ -1518,7 +1558,7 @@ Fournir à l&#39;utilisateur des messages d&#39;état qui lui donnent un retour 
 <h1 id="pr-venir-l-utilisateur-de-l-ouverture-d-une-nouvelle-fen-tre">Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre"}
     ]);
 });</script>
@@ -1551,7 +1591,7 @@ Pour une image-lien, un attribut <code>alt=&quot;consulter les conditions géné
 <h1 id="donner-acc-s-au-contenu-quelle-que-soit-l-orientation-de-l-cran">Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Donner accès au contenu quelle que soit l'orientation de l'écran"}
     ]);
 });</script>
@@ -1569,7 +1609,7 @@ Pour une image-lien, un attribut <code>alt=&quot;consulter les conditions géné
 <h1 id="rendre-le-parcours-du-focus-s-quentiel-et-logique-sans-pi-ge-clavier">Rendre le parcours du focus séquentiel et logique sans piège clavier</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Rendre le parcours du focus séquentiel et logique sans piège clavier"}
     ]);
 });</script>
@@ -1602,7 +1642,7 @@ Permettre la navigation logique sans piège au clavier dans les pages de l’app
 <h1 id="respecter-la-s-mantique-html">Respecter la sémantique HTML</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Respecter la sémantique HTML"}
     ]);
 });</script>
@@ -1647,7 +1687,7 @@ Vérifier que la page, si besoin, utilise des listes sémantiquement pertinentes
 <h1 id="s-parer-le-contenu-de-l-interactivit-et-de-la-pr-sentation">Séparer le contenu de l’interactivité et de la présentation</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Séparer le contenu de l’interactivité et de la présentation"}
     ]);
 });</script>
@@ -1679,7 +1719,7 @@ Vérifier que la page, si besoin, utilise des listes sémantiquement pertinentes
 <h1 id="structurer-les-tableaux-de-donn-es">Structurer les tableaux de données</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Structurer les tableaux de données"}
     ]);
 });</script>
@@ -1714,7 +1754,7 @@ Donner un résumé et un titre aux tableaux de données permet à tous d’en co
 <h1 id="d-finir-des-zones-sensibles-de-taille-suffisante">Définir des zones sensibles de taille suffisante</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Définir des zones sensibles de taille suffisante"}
     ]);
 });</script>
@@ -1729,7 +1769,7 @@ Par ailleurs les zones sensibles doivent être suffisamment espacées les unes d
 <h1 id="donner-un-titre-aux-pages">Donner un titre aux pages</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Donner un titre aux pages"}
     ]);
 });</script>
@@ -1757,7 +1797,7 @@ Par ailleurs les zones sensibles doivent être suffisamment espacées les unes d
 <h1 id="donner-des-titres-aux-rubriques">Donner des titres aux rubriques</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Donner des titres aux rubriques"}
     ]);
 });</script>
@@ -1816,7 +1856,7 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
 <h1 id="permettre-d-utiliser-les-principales-fonctionnalit-s-de-l-application-au-clavier">Permettre d’utiliser les principales fonctionnalités de l’application au clavier</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Permettre d’utiliser les principales fonctionnalités de l’application au clavier"}
     ]);
 });</script>
@@ -1851,7 +1891,7 @@ Mettre en place des gestionnaires d’événements qui ne s’appuient pas uniqu
 <h1 id="rendre-visible-le-focus-en-toute-circonstance">Rendre visible le focus en toute circonstance</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
         {"label":"Rendre visible le focus en toute circonstance"}
     ]);
 });</script>
