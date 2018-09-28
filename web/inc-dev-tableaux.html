@@ -126,15 +126,24 @@
 <li>Utiliser l’élément <code>table</code> avec les éléments enfants <code>th</code> (pour les cellules d’entêtes), <code>td</code>, <code>tr</code>.</li>
 <li>Utiliser l’attribut <code>scope</code> avec la valeur <code>row</code>/<code>col</code> pour associer les cellules d’en-têtes et les cellules de données ; pour des tableaux complexes, utiliser les attributs <code>id</code> et <code>headers</code>.</li>
 <li>Utiliser la balise <code>caption</code>, une balise <code>h1</code> à <code>h6</code> juste avant le tableau ou lier un texte proche du tableau via un attribut <code>aria-labelledby</code> dans l’élément <code>table</code> pour associer un titre au tableau (cf. <a href="./label-ledby-describedby.html">les attributs ARIA qui peuvent vous sauver</a>).</li>
-<li>Mettre un attribut <code>summary</code> dans l’élément <code>table</code> pour expliciter la structure dans le cas d’un tableau complexe. Attention cet attribut est déprécié en <abbr>HTML5</abbr>, il faudra donc rajouter, si besoin, le contenu du <code>summary</code> dans le titre du tableau.</li>
+<li>Ajouter un résumé afin d’expliciter la structure d&#39;un tableau complexe :<ul>
+<li><strong>HTML5</strong>: ajouter le résumé directement dans la légende (<code>caption</code>).</li>
+<li><strong>Version antérieure d&#39;HTML</strong>: ajouter le résumé dans un attribut <code>summary</code>.</li>
+</ul>
+</li>
 </ul>
 <p><strong>À vérifier&nbsp;:</strong></p>
 <ul>
 <li>Rappel&nbsp;: ne pas utiliser de tableaux à des fins de mise en page. </li>
-<li>La légende (<code>caption</code>) peut être remplacée par un titre de section (<code>hx</code>) placé avant le tableau. L’attribut <code>summary</code>, quant à lui, n’est nécessaire que pour des tableaux complexes.</li>
+<li>La légende (<code>caption</code>) peut être remplacée par un titre de section (<code>hx</code>) placé avant le tableau.</li>
 <li>Préférer scinder un tableau complexe en plusieurs tableaux plus simples.</li>
-<li>Mettre un résumé (attribut <code>summary</code>) dans le tableau pour expliciter la structure dans le cas d’un tableau complexe.</li>
 <li>Les balises <code>tbody</code>, <code>tfoot</code> et <code>thead</code> n’ont aucune influence sur l’accessibilité, il n’y a donc pas d’obligation à les utiliser.</li>
+</ul>
+<p>Dans le cas d’un tableau complexe, un résumé est présent pour expliciter la structure :</p>
+<ul>
+<li><strong>HTML5</strong>: le résumé du tableau est présent dans la légende (<code>caption</code>).</li>
+<li><strong>HTML5 - solution alternative</strong>: le résumé est lié au tableau via un attribut <code>aria-describedby</code> </li>
+<li><strong>Version antérieure d&#39;HTML</strong>: le résumé est présent dans un attribut <code>summary</code> du tableau</li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Donner un résumé et un titre aux tableaux de données permet à tous d’en connaître l’objet rapidement sans avoir à le parcourir. Pour des utilisateurs déficients visuels, lier les cellules aux en-têtes permet de se situer dans le tableau et de comprendre les données de celui-ci.</p>
