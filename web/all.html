@@ -1256,19 +1256,27 @@ Les éléments graphiques inactifs de la page tels que des boutons font exceptio
 
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un déficit d’attention.<br><strong>Quand&nbsp;:</strong> dès la phase de conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong>
-Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l’activation d’un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l’utilisateur ait été averti.  </p>
-<p>Ne pas imposer à l’utilisateur un temps imparti pour effectuer une action et doit être en mesure de rallonger un temps imparti pour effectuer une action.</p>
-<p><strong>À vérifier&nbsp;:</strong>
-Si des raccourcis clavier sont disponibles, s&#39;assurer qu&#39;il soit possible de désactiver, modifier ces raccourcis et qu&#39;ils sont activables que lorsque le composant a le focus.</p>
+<p><strong>Description&nbsp;:</strong></p>
+<ul>
+<li>Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l’activation d’un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l’utilisateur ait été averti.  </li>
+<li>Ne pas imposer à l’utilisateur un temps imparti pour effectuer une action. Celui-ci doit être en mesure de rallonger un temps imparti le cas échéant.</li>
+<li>Si des raccourcis clavier reposant sur une seule touche sont disponibles, il est nécessaire de prendre certaines mesures afin d&#39;éviter d&#39;éventuels conflits avec des outils d&#39;assistance.</li>
+</ul>
+<p><strong>À vérifier&nbsp;:</strong>  </p>
+<p>Concernant les raccourcis, s&#39;assurer qu&#39;au moins une des affirmations suivantes est vraie:</p>
+<ul>
+<li><strong>désactivation</strong>: le raccourci peut être désactivé.</li>
+<li><strong>modification</strong>: le raccourci peut être modifé (possibilité de choisir une seule ou plusieurs touches pour déclencher le raccourci).</li>
+<li><strong>activation au focus</strong>: le raccourci est actif uniquement à la prise du focus de l&#39;élément concerné. </li>
+</ul>
 <p>Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir :</p>
 <ul>
-<li>Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus (par exemple avec la touche <kbd>échap.</kbd>).</li>
+<li>Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus; par exemple avec la touche <kbd>échap.</kbd> (utile notamment pour les utilisateurs de loupe d&#39;écran).</li>
 <li>Déplacer le pointeur de la souris sur ce nouveau contenu sans que celui-ci disparaisse.</li>
 </ul>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
-Donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action et lui laisser le temps nécessaire pour effectuer une action.</p>
-<p><strong>Exemple&nbsp;:</strong><br>Un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas être envoyé automatiquement après la saisie de l’utilisateur.</p>
+donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action et lui laisser le temps nécessaire pour effectuer une action.</p>
+<p><strong>Exemple&nbsp;:</strong> un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas être envoyé automatiquement après la saisie de l’utilisateur.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus">1.4.13 Content on Hover or Focus</a></li>

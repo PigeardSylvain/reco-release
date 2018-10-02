@@ -815,22 +815,26 @@ Indeed, screen reader users are the most affected by the lack of accessibility, 
 <p>*<em>Users’ goal: *</em></p>
 <p>Allow the screen reader users to access the main features of the application, but also ensure the usability of the application for all users.</p>
 <h2 id="25-ensure-the-user-keeps-control-during-interactions">25. Ensure the user keeps control during interactions</h2>
-<p>*<em>Target: *</em>Everyone, especially those who are visually impaired, cognitive or with attention deficit.
-*<em>When: *</em>early in the design phase and during development.</p>
-<p>*<em>Description: *</em>
-Do not induce a change of context when setting the focus on an element, entering data or activating a form element without this change being predictable (button) or the user has been warned.</p>
-<p>Do not impose on the user a time limit to perform an action and must be able to extend a given time to perform an action.</p>
-<p><strong>Checklist:</strong>
-If keyboard shortcuts are available, make sure that you can disable, modify these shortcuts or they can activated only when the component has focus.</p>
+<p>*<em>Target: *</em>Everyone, especially those who are visually impaired, cognitive or with attention deficit.<br>*<em>When: *</em>early in the design phase and during development.</p>
+<p>*<em>Description: *</em>  </p>
+<ul>
+<li>Do not induce a change of context when setting the focus on an element, entering data or activating a form element without this change being predictable (button) or the user has been warned.</li>
+<li>Do not impose on the user a time limit to perform an action. This must be able to extend a time limit if appropriate.</li>
+<li>If keyboard shortcuts based on a single key is available, it is necessary to take some measures to avoid possible conflicts with assistive technology.</li>
+</ul>
+<p><strong>Checklist:</strong><br>Regarding shortcuts, make sure that at least one of the following statements is true:</p>
+<ul>
+<li><strong>turn off</strong>: the shortcut can be turned off.</li>
+<li><strong>modification</strong>: a mechanism is available to remap the shortcut to use one or more non-printable keyboard characters (e.g. Ctrl, Alt, etc).</li>
+<li><strong>focus activation</strong>: the keyboard shortcut for a user interface component is only active when that component has focus.</li>
+</ul>
 <p>If content appears on mouse over or focus (eg tooltip), the user must be able to:</p>
 <ul>
-<li>Hide this new content without the need to move the pointer or focus (eg with the &lt;<kbd>esc.</kbd> key).</li>
+<li>Hide this new content without the need to move the pointer or focus; eg with the <kbd>esc.</kbd> key (useful especially for screen magnifier users).</li>
 <li>Move the mouse pointer on this new content without it disappearing.</li>
 </ul>
-<p>*<em>User Objective: *</em>
-Give all users control of the context changes related to their action and give them the necessary time to perform an action.</p>
-<p>*<em>Example: *</em>
-A form must have a send button. It should not be sent automatically after the user input.</p>
+<p>*<em>User Objective: *</em> give all users control of the context changes related to their action and give them the necessary time to perform an action.</p>
+<p>*<em>Example: *</em> a form must have a send button. It should not be sent automatically after the user input.</p>
 <p><strong>Reference <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a href="https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus">1.4.13 Content on Hover or Focus</a></li>
