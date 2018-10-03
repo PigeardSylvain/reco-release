@@ -279,8 +279,8 @@ Comme il est précisé dans <a href="https://www.accede-web.com/notices/graphiqu
 Certains points déjà présents dans la charte Orange (utilisation des couleurs, alignement du texte…) n’ont pas été repris dans cette liste de critères.</p>
 <p>Deux versions sont disponibles&nbsp;</p>
 <ul>
-<li><strong>La première version</strong> n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.</li>
-<li><strong>La seconde version</strong> aborde le code et s’adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.</li>
+<li><strong>La version concepteurs</strong> n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.</li>
+<li><strong>La version développeurs</strong> aborde le code et s’adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.</li>
 </ul>
 <ul class="nav nav-tabs" role="tablist">
 <li class="nav-item">
@@ -440,7 +440,7 @@ Certains points déjà présents dans la charte Orange (utilisation des couleurs
 <h1 id="situer-explicitement-la-page-dans-le-site-et-fournir-plusieurs-moyens-d-y-acc-der">Situer explicitement la page dans le site et fournir plusieurs moyens d&#39;y accéder</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Situer explicitement la page dans le site et fournir plusieurs moyens d'y accéder"}
     ]);
 });</script>
@@ -462,7 +462,7 @@ Une application offre un menu de navigation parcellaire et aucun autre moyen pou
 <h1 id="agrandissement-de-texte-et-adaptation-la-taille-d-affichage">Agrandissement de texte et adaptation à la taille d&#39;affichage</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Agrandissement de texte et adaptation à la taille d'affichage"}
     ]);
 });</script>
@@ -481,7 +481,7 @@ Une application offre un menu de navigation parcellaire et aucun autre moyen pou
 <h1 id="permettre-d-a-rer-le-texte">Permettre d&#39;aérer le texte</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Permettre d'aérer le texte"}
     ]);
 });</script>
@@ -509,29 +509,30 @@ Une application offre un menu de navigation parcellaire et aucun autre moyen pou
   }
 </code></pre>
 
-<p>Pour faciliter le test, vous pouvez utiliser le bookmarklet suivant qui appliquera ces styles à la page courante de votre navigateur (bookmarklet à glisser dans votre barre de favoris) : <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Espacement du texte</a></p>
+<p><strong>Bookmarklet:</strong><br>Pour faciliter le test, vous pouvez utiliser le bookmarklet suivant qui appliquera ces styles à la page courante de votre navigateur (bookmarklet à glisser dans votre barre de favoris) : <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Espacement du texte</a></p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="proposer-une-alternative-aux-gestuelles-complexes">Proposer une alternative aux gestuelles complexes</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Proposer une alternative aux gestuelles complexes"}
     ]);
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p><strong>Cible&nbsp;:</strong> tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
-De même pour les interactions nécessitant un changement d&#39;orientation de l&#39;écran (basculement, rotation, secouement...).</p>
+De même pour les interactions nécessitant un changement d&#39;orientation de l&#39;écran (basculement, rotation, secouement...), une alternative doit exister.</p>
+<p><strong>Gestuelles complexes</strong>: tout geste multipointeurs (nécessitant plusieurs doigts), et/ou nécessitant de suivre une trajectoire précise.<br><strong>Gestuelle simplifiée</strong>: une alternative nécessitant un seul pointeur (un seul doigt) et sans trajectoire précise.</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="rendre-accessible-les-pistes-audio-ou-vid-o">Rendre accessible les pistes audio ou vidéo</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Rendre accessible les pistes audio ou vidéo"}
     ]);
 });</script>
@@ -560,7 +561,7 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <h1 id="-viter-les-captcha">Éviter les captcha</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Éviter les captcha"}
     ]);
 });</script>
@@ -586,7 +587,7 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <h1 id="identifier-et-conserver-la-coh-rence-des-regroupements-et-des-diff-rentes-r-gions-de-la-page">Identifier et conserver la cohérence des regroupements et des différentes régions de la page</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Identifier et conserver la cohérence des regroupements et des différentes régions de la page"}
     ]);
 });</script>
@@ -613,7 +614,7 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <h1 id="assurer-un-contraste-suffisant-entre-texte-et-fond">Assurer un contraste suffisant entre texte et fond</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Assurer un contraste suffisant entre texte et fond"}
     ]);
 });</script>
@@ -645,7 +646,7 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 <h1 id="permettre-le-contr-le-des-animations">Permettre le contrôle des animations</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Permettre le contrôle des animations"}
     ]);
 });</script>
@@ -662,7 +663,7 @@ Par ailleurs, éviter autant que possible les flashs lumineux et les changements
 <h1 id="d-finir-des-quivalents-textuels">Définir des équivalents textuels</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Définir des équivalents textuels"}
     ]);
 });</script>
@@ -685,7 +686,7 @@ Par ailleurs, éviter autant que possible les flashs lumineux et les changements
 <h1 id="rendre-utilisables-les-formulaires">Rendre utilisables les formulaires</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Rendre utilisables les formulaires"}
     ]);
 });</script>
@@ -706,7 +707,7 @@ Par ailleurs, éviter autant que possible les flashs lumineux et les changements
 <h1 id="ne-pas-utiliser-la-couleur-ou-l-information-sensorielle-comme-seule-source-d-information">Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information"}
     ]);
 });</script>
@@ -730,7 +731,7 @@ See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License 
 <h1 id="libell-des-liens-et-des-boutons">Libellé des liens et des boutons</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Libellé des liens et des boutons"}
     ]);
 });</script>
@@ -747,7 +748,7 @@ Dans les cas exceptionnels où ce n’est techniquement pas possible, prévoir q
 <h1 id="fournir-des-liens-d-vitement">Fournir des liens d’évitement</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Fournir des liens d’évitement"}
     ]);
 });</script>
@@ -765,7 +766,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 <h1 id="permettre-la-navigation-au-clavier">Permettre la navigation au clavier</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Permettre la navigation au clavier"}
     ]);
 });</script>
@@ -781,7 +782,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 <h1 id="-viter-les-boites-de-dialogues-et-l-ouverture-de-nouvelles-fen-tres">Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres"}
     ]);
 });</script>
@@ -806,21 +807,25 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 <h1 id="donner-acc-s-au-contenu-quelle-que-soit-l-orientation-de-l-cran">Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Donner accès au contenu quelle que soit l'orientation de l'écran"}
     ]);
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p><strong>Cible&nbsp;:</strong> tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>L&#39;accès au contenu ne doit pas dépendre de l&#39;orientation de l&#39;écran (portrait et paysage).</p>
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>L&#39;accès au contenu ne doit pas dépendre de l&#39;orientation de l&#39;écran (portrait et paysage). Sauf usage essentiel au fonctionnement de l’application (ex : <span lang="en">serious game</span>).</p>
+<p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a></li>
+</ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="donner-un-titre-aux-pages">Donner un titre aux pages</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Donner un titre aux pages"}
     ]);
 });</script>
@@ -841,7 +846,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 <h1 id="donner-des-titres-aux-rubriques">Donner des titres aux rubriques</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Donner des titres aux rubriques"}
     ]);
 });</script>
@@ -870,7 +875,7 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
 <h1 id="assurer-la-visibilit-du-focus">Assurer la visibilité du focus</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Assurer la visibilité du focus"}
     ]);
 });</script>
@@ -889,22 +894,26 @@ Dans la seconde capture, les pointillés ont été supprimés, mais un encadré 
 <h1 id="d-finir-des-zones-sensibles-de-taille-suffisante">Définir des zones sensibles de taille suffisante</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html"},
+        {"label":"Critères WCAG par thème - Concepteurs", "url": "./incontournables.html"},
         {"label":"Définir des zones sensibles de taille suffisante"}
     ]);
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
-<p><strong>Cible&nbsp;:</strong> tous le monde en particulier, les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Chaque zone sensible doit avoir une taille suffisante (9mm minimum de largeur et de hauteur).
-Par ailleurs les zones sensibles doivent être suffisamment espacées les unes des autres (environ 2mm minimum).</p>
-<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
- Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+<p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description&nbsp;:</strong><br>Pour les utilisateurs de périphériques tactiles (smartphones, tablettes...), les zones tactiles doivent avoir une taille suffisante pour permettre une navigation aisée. Par ailleurs celles-ci doivent être également suffisamment espacées les unes des autres.</p>
+<p>** A vérifier **</p>
+<ul>
+<li>La taille des zones tactiles doit être de 9mm minimum de largeur et de hauteur.</li>
+<li>L&#39;espacement entre les zones tactiles ne doit pas être inférieur à 2mm.<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+Copyright (C) 2016  Orange SA
+See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></li>
+</ul>
+
 <h1 id="fournir-des-acc-s-multiples-et-une-localisation">Fournir des accès multiples et une localisation</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Fournir des accès multiples et une localisation"}
     ]);
 });</script>
@@ -912,10 +921,10 @@ Par ailleurs les zones sensibles doivent être suffisamment espacées les unes d
 <p><span data-menuitem="incontournables"></span></p>
 <p>** Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles ou cognitives.</p>
 <p>** Description&nbsp;:**
-Donner à l’utilisateur plusieurs moyens de situer et accéder à un contenu spécifique, localiser la page Web en cours de consultation dans un ensemble de pages. Lorsque la page est une étape dans un processus où les pages s’enchaînent les unes après les autres, ce critère peut être ignoré.</p>
+Donner à l’utilisateur plusieurs moyens de situer et accéder à un contenu spécifique, localiser la page Web en cours de consultation dans un ensemble de pages. Lorsque la page est une étape dans un processus où les pages s’enchaînent les unes après les autres, l’implémentation d’accès multiples peut être ignorée.</p>
 <p>** À vérifier&nbsp;:**
-S’assurer que plusieurs systèmes permettent de situer et accéder à une page ou un contenu dans le site&nbsp;: un outil de recherche sur l’ensemble du site, un plan du site, un menu de navigation global, un fil d’Ariane…
-** Objectif utilisateur&nbsp;:**
+S’assurer que plusieurs systèmes permettent de situer et accéder à une page ou un contenu dans le site&nbsp;: un outil de recherche sur l’ensemble du site, un plan du site, un menu de navigation principal présentant la position courante de l&#39;utilisateur, un fil d’Ariane…</p>
+<p>** Objectif utilisateur&nbsp;:**
 Permettre à tous les utilisateurs de se repérer afin d’accéder plus facilement à l’ensemble du contenu du site.</p>
 <p>** Exemple valide&nbsp;:**
 Le site propose, à la fois, une navigation principale complète et précise et un fil d’Ariane.</p>
@@ -932,7 +941,7 @@ Une application offre un menu de navigation parcellaire et aucun autre moyen pou
 <h1 id="utiliser-des-tailles-relatives-et-faire-du-web-adaptatif">Utiliser des tailles relatives et faire du web adaptatif</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Utiliser des tailles relatives et faire du web adaptatif"}
     ]);
 });</script>
@@ -964,7 +973,7 @@ Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter 
 <h1 id="permettre-d-a-rer-le-texte">Permettre d&#39;aérer le texte</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Permettre d'aérer le texte"}
     ]);
 });</script>
@@ -991,7 +1000,7 @@ Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter 
   }
 </code></pre>
 
-<p>Pour faciliter le test, vous pouvez utiliser le bookmarklet suivant (à glisser dans votre barre de favoris) : <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Espacement du texte</a></p>
+<p><strong>Bookmarklet:</strong><br>Pour faciliter le test, vous pouvez utiliser le bookmarklet suivant (à glisser dans votre barre de favoris) : <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Espacement du texte</a></p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Permettre aux personnes déficientes visuelles et cognitives d&#39;améliorer le confort de lecture.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
@@ -1004,7 +1013,7 @@ Permettre aux personnes déficientes visuelles et cognitives d&#39;améliorer le
 <h1 id="proposer-une-alternative-aux-gestuelles-complexes">Proposer une alternative aux gestuelles complexes</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Proposer une alternative aux gestuelles complexes"}
     ]);
 });</script>
@@ -1012,7 +1021,8 @@ Permettre aux personnes déficientes visuelles et cognitives d&#39;améliorer le
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description&nbsp;:</strong><br>Pour chaque interaction gestuelle complexe, une alternative doit être disponible (par exemple une alternative non gestuelle ou simplifiée).
-De même pour les interactions nécessitant un changement d&#39;orientation de l&#39;écran (basculement, rotation, secouement...), une alternative oit exister.</p>
+De même pour les interactions nécessitant un changement d&#39;orientation de l&#39;écran (basculement, rotation, secouement...), une alternative doit exister.</p>
+<p><strong>Gestuelles complexes</strong>: tout geste multipointeurs (nécessitant plusieurs doigts), et/ou nécessitant de suivre une trajectoire précise.<br><strong>Gestuelle simplifiée</strong>: une alternative nécessitant un seul pointeur (un seul doigt) et sans trajectoire précise.</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a></li>
@@ -1023,7 +1033,7 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <h1 id="permettre-d-annuler-le-d-clenchement-des-interactions-gestuelles">Permettre d&#39;annuler le déclenchement des interactions gestuelles</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Permettre d'annuler le déclenchement des interactions gestuelles"}
     ]);
 });</script>
@@ -1041,7 +1051,7 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <h1 id="rendre-accessible-les-pistes-audio-ou-vid-o">Rendre accessible les pistes audio ou vidéo</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Rendre accessible les pistes audio ou vidéo"}
     ]);
 });</script>
@@ -1072,6 +1082,8 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#captions-live">1.2.4 Captions (Live)</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#audio-description-prerecorded">1.2.5 Audio Description (Prerecorded)</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#audio-control">1.4.2 Audio Control</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a></li>
 </ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
@@ -1079,21 +1091,21 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <h1 id="autoriser-l-utilisation-du-zoom">Autoriser l&#39;utilisation du zoom</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Autoriser l'utilisation du zoom"}
     ]);
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes déficientes visuelles.<br><strong>Quand&nbsp;:</strong> lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Le site ne doit pas interdire ou limiter l&#39;utilisation du zoom (notamment sur les mobiles).</p>
+<p><strong>Description&nbsp;:</strong><br>L&#39;utilisateur doit être capable de zoomer le contenu de la page facilement sur périphérique tactile (smartphone, tablette...). Cette fonctionnalité de base offerte par le navigateur ne doit pas être désactivée au niveau du code (ne pas utiliser de balise <code>meta</code> interdisant le zoom).</p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="-viter-les-captcha">Éviter les captcha</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Éviter les captcha"}
     ]);
 });</script>
@@ -1118,7 +1130,7 @@ De même pour les interactions nécessitant un changement d&#39;orientation de l
 <h1 id="indiquer-la-langue-principale-et-les-changements-de-langue">Indiquer la langue principale et les changements de langue</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Indiquer la langue principale et les changements de langue"}
     ]);
 });</script>
@@ -1151,7 +1163,7 @@ Préciser également la langue d’un contenu exprimé dans une langue autre que
 <h1 id="identifier-et-conserver-la-coh-rence-des-regroupements-et-des-diff-rentes-r-gions-de-la-page">Identifier et conserver la cohérence des regroupements et des différentes régions de la page</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Identifier et conserver la cohérence des regroupements et des différentes régions de la page"}
     ]);
 });</script>
@@ -1185,7 +1197,7 @@ Pour donner une structure sémantique aux grandes régions d’une page, on peut
 <h1 id="assurer-un-contraste-suffisant-entre-texte-et-fond">Assurer un contraste suffisant entre texte et fond</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Assurer un contraste suffisant entre texte et fond"}
     ]);
 });</script>
@@ -1226,7 +1238,7 @@ Les éléments graphiques inactifs de la page tels que des boutons font exceptio
 <h1 id="permettre-le-contr-le-des-animations">Permettre le contrôle des animations</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Permettre le contrôle des animations"}
     ]);
 });</script>
@@ -1249,7 +1261,7 @@ Les éléments graphiques inactifs de la page tels que des boutons font exceptio
 <h1 id="s-assurer-que-l-utilisateur-garde-le-contr-le-lors-des-interactions">S’assurer que l’utilisateur garde le contrôle lors des interactions</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"S’assurer que l’utilisateur garde le contrôle lors des interactions"}
     ]);
 });</script>
@@ -1261,19 +1273,26 @@ Les éléments graphiques inactifs de la page tels que des boutons font exceptio
 <li>Ne pas induire de changement de contexte lors de la prise de focus, la saisie de données ou l’activation d’un élément de formulaire sans que ce changement soit prévisible (bouton) ou que l’utilisateur ait été averti.  </li>
 <li>Ne pas imposer à l’utilisateur un temps imparti pour effectuer une action. Celui-ci doit être en mesure de rallonger un temps imparti le cas échéant.</li>
 <li>Si des raccourcis clavier reposant sur une seule touche sont disponibles, il est nécessaire de prendre certaines mesures afin d&#39;éviter d&#39;éventuels conflits avec des outils d&#39;assistance.</li>
+<li>L&#39;utilisateur doit avoir le contrôle des contenus s&#39;ouvrant au survol ou à la prise de focus.</li>
 </ul>
 <p><strong>À vérifier&nbsp;:</strong>  </p>
-<p>Concernant les raccourcis, s&#39;assurer qu&#39;au moins une des affirmations suivantes est vraie:</p>
+<ol>
+<li><p>Concernant les raccourcis, s&#39;assurer qu&#39;au moins une des affirmations suivantes est vraie:</p>
 <ul>
 <li><strong>désactivation</strong>: le raccourci peut être désactivé.</li>
 <li><strong>modification</strong>: le raccourci peut être modifé (possibilité de choisir une seule ou plusieurs touches pour déclencher le raccourci).</li>
 <li><strong>activation au focus</strong>: le raccourci est actif uniquement à la prise du focus de l&#39;élément concerné. </li>
 </ul>
-<p>Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir :</p>
+</li>
+<li><p>Si du contenu apparaît au survol de la souris ou à la prise de focus (ex: infobulle), l&#39;utilisateur doit pouvoir :</p>
 <ul>
-<li>Masquer ce nouveau contenu sans avoir besoin de déplacer le pointeur ou le focus; par exemple avec la touche <kbd>échap.</kbd> (utile notamment pour les utilisateurs de loupe d&#39;écran).</li>
-<li>Déplacer le pointeur de la souris sur ce nouveau contenu sans que celui-ci disparaisse.</li>
+<li><strong>Masquer ce nouveau contenu</strong> sans avoir besoin de déplacer le pointeur ou le focus; par exemple avec la touche <kbd>échap.</kbd> (utile notamment pour les utilisateurs de loupe d&#39;écran).</li>
+<li><strong>Déplacer le pointeur de la souris</strong> sur ce nouveau contenu sans que celui-ci disparaisse.</li>
 </ul>
+</li>
+<li><p>Si des actions doivent être réalisées dans un temps imparti, vérifier que l’utilisateur puisse allonger ou supprimer cette restriction.</p>
+</li>
+</ol>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 donner à tous les utilisateurs la maîtrise des changements de contexte lié à son action et lui laisser le temps nécessaire pour effectuer une action.</p>
 <p><strong>Exemple&nbsp;:</strong> un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas être envoyé automatiquement après la saisie de l’utilisateur.</p>
@@ -1291,7 +1310,7 @@ donner à tous les utilisateurs la maîtrise des changements de contexte lié à
 <h1 id="fournir-un-quivalent-textuel-pour-les-images-et-les-cadres">Fournir un équivalent textuel pour les images et les cadres</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Fournir un équivalent textuel pour les images et les cadres"}
     ]);
 });</script>
@@ -1334,7 +1353,7 @@ Permettre l’accès à l’information incluse dans une image pour des utilisat
 <h1 id="associer-une-tiquette-pertinente-chaque-champ-de-formulaire">Associer une étiquette pertinente à chaque champ de formulaire</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Associer une étiquette pertinente à chaque champ de formulaire"}
     ]);
 });</script>
@@ -1374,7 +1393,7 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 <h1 id="d-tecter-identifier-les-erreurs-et-sugg-rer-des-corrections">Détecter, identifier les erreurs et suggérer des corrections</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Détecter, identifier les erreurs et suggérer des corrections"}
     ]);
 });</script>
@@ -1405,7 +1424,7 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 <h1 id="ne-pas-utiliser-la-couleur-ou-l-information-sensorielle-comme-seule-source-d-information">Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Ne pas utiliser la couleur ou l’information sensorielle comme seule source d’information"}
     ]);
 });</script>
@@ -1436,7 +1455,7 @@ L’attribut <code>title</code> positionné sur une balise de champ de formulair
 <h1 id="rendre-les-intitul-s-des-liens-et-des-boutons-compr-hensibles-hors-contexte">Rendre les intitulés des liens et des boutons compréhensibles hors contexte</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Rendre les intitulés des liens et des boutons compréhensibles hors contexte"}
     ]);
 });</script>
@@ -1490,7 +1509,7 @@ Expliciter les liens et les boutons permet d’améliorer le référencement nat
 <h1 id="s-assurer-que-les-principales-fonctionnalit-s-sont-utilisables-avec-les-lecteurs-d-cran">S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran"}
     ]);
 });</script>
@@ -1504,13 +1523,17 @@ Expliciter les liens et les boutons permet d’améliorer le référencement nat
 En effet, les utilisateurs de lecteur d’écran sont les plus impactés par un manque d’accessibilité, on repère un grand nombre de problèmes en vérifiant cette exigence.</p>
 <p><strong>Objectif utilisateur&nbsp;:</strong>
 Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales fonctionnalités de l’application, mais aussi s’assurer pour tous les utilisateurs de l’utilisabilité de l’application.</p>
+<p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a></li>
+</ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="fournir-des-liens-d-vitement">Fournir des liens d’évitement</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Fournir des liens d’évitement"}
     ]);
 });</script>
@@ -1536,7 +1559,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 <h1 id="permettre-de-conna-tre-le-r-sultat-d-une-interaction-utilisateur-l-aide-de-messages-contextuels">Permettre de connaître le résultat d&#39;une interaction utilisateur à l&#39;aide de messages contextuels</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Permettre de connaître le résultat d'une interaction utilisateur à l'aide de messages contextuels"}
     ]);
 });</script>
@@ -1566,7 +1589,7 @@ Fournir à l&#39;utilisateur des messages d&#39;état qui lui donnent un retour 
 <h1 id="pr-venir-l-utilisateur-de-l-ouverture-d-une-nouvelle-fen-tre">Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Prévenir l’utilisateur de l’ouverture d’une nouvelle fenêtre"}
     ]);
 });</script>
@@ -1599,14 +1622,14 @@ Pour une image-lien, un attribut <code>alt=&quot;consulter les conditions géné
 <h1 id="donner-acc-s-au-contenu-quelle-que-soit-l-orientation-de-l-cran">Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Donner accès au contenu quelle que soit l'orientation de l'écran"}
     ]);
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>L&#39;accès au contenu ne doit pas dépendre de l&#39;orientation de l&#39;écran (portrait et paysage).</p>
+<p><strong>Description&nbsp;:</strong><br>L&#39;accès au contenu ne doit pas dépendre de l&#39;orientation de l&#39;écran (portrait et paysage). Sauf usage essentiel au fonctionnement de l’application (ex : <span lang="en">serious game</span>).</p>
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a></li>
@@ -1617,7 +1640,7 @@ Pour une image-lien, un attribut <code>alt=&quot;consulter les conditions géné
 <h1 id="rendre-le-parcours-du-focus-s-quentiel-et-logique-sans-pi-ge-clavier">Rendre le parcours du focus séquentiel et logique sans piège clavier</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Rendre le parcours du focus séquentiel et logique sans piège clavier"}
     ]);
 });</script>
@@ -1650,7 +1673,7 @@ Permettre la navigation logique sans piège au clavier dans les pages de l’app
 <h1 id="respecter-la-s-mantique-html">Respecter la sémantique HTML</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Respecter la sémantique HTML"}
     ]);
 });</script>
@@ -1695,7 +1718,7 @@ Vérifier que la page, si besoin, utilise des listes sémantiquement pertinentes
 <h1 id="s-parer-le-contenu-de-l-interactivit-et-de-la-pr-sentation">Séparer le contenu de l’interactivité et de la présentation</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Séparer le contenu de l’interactivité et de la présentation"}
     ]);
 });</script>
@@ -1727,7 +1750,7 @@ Vérifier que la page, si besoin, utilise des listes sémantiquement pertinentes
 <h1 id="structurer-les-tableaux-de-donn-es">Structurer les tableaux de données</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Structurer les tableaux de données"}
     ]);
 });</script>
@@ -1771,22 +1794,26 @@ Donner un résumé et un titre aux tableaux de données permet à tous d’en co
 <h1 id="d-finir-des-zones-sensibles-de-taille-suffisante">Définir des zones sensibles de taille suffisante</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Définir des zones sensibles de taille suffisante"}
     ]);
 });</script>
 
 <p><span data-menuitem="incontournables"></span></p>
 <p><strong>Cible&nbsp;:</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br><strong>Quand&nbsp;:</strong> lors de la conception et lors du développement.</p>
-<p><strong>Description&nbsp;:</strong><br>Chaque zone sensible doit avoir une taille suffisante (9mm minimum de largeur et de hauteur).
-Par ailleurs les zones sensibles doivent être suffisamment espacées les unes des autres (environ 2mm minimum).</p>
+<p><strong>Description&nbsp;:</strong><br>Pour les utilisateurs de périphériques tactiles (smartphones, tablettes...), les zones tactiles doivent avoir une taille suffisante pour permettre une navigation aisée. Par ailleurs celles-ci doivent être également suffisamment espacées les unes des autres.</p>
+<p>** A vérifier **</p>
+<ul>
+<li>La taille des zones tactiles doit être de 9mm minimum de largeur et de hauteur.</li>
+<li>L&#39;espacement entre les zones tactiles ne doit pas être inférieur à 2mm.</li>
+</ul>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
  See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
 <h1 id="donner-un-titre-aux-pages">Donner un titre aux pages</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Donner un titre aux pages"}
     ]);
 });</script>
@@ -1814,7 +1841,7 @@ Par ailleurs les zones sensibles doivent être suffisamment espacées les unes d
 <h1 id="donner-des-titres-aux-rubriques">Donner des titres aux rubriques</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Donner des titres aux rubriques"}
     ]);
 });</script>
@@ -1873,7 +1900,7 @@ Tout comme dans un fichier Word, il est possible d’utiliser la table des mati�
 <h1 id="permettre-d-utiliser-les-principales-fonctionnalit-s-de-l-application-au-clavier">Permettre d’utiliser les principales fonctionnalités de l’application au clavier</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Permettre d’utiliser les principales fonctionnalités de l’application au clavier"}
     ]);
 });</script>
@@ -1901,14 +1928,15 @@ Mettre en place des gestionnaires d’événements qui ne s’appuient pas uniqu
 <p><strong>Référence <abbr>WCAG</abbr>&nbsp;:</strong>  </p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#keyboard">2.1.1 Keyboard</a></li>
+<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a><!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
+Copyright (C) 2016  Orange SA
+See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). --></li>
 </ul>
-<!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
- Copyright (C) 2016  Orange SA
- See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENSE file). -->
+
 <h1 id="rendre-visible-le-focus-en-toute-circonstance">Rendre visible le focus en toute circonstance</h1>
 <script>$(document).ready(function () {
     setBreadcrumb([
-        {"label":"Critères incontournables", "url": "./incontournables.html#dev"},
+        {"label":"Critères WCAG par thème - Développeurs", "url": "./incontournables.html#dev"},
         {"label":"Rendre visible le focus en toute circonstance"}
     ]);
 });</script>
@@ -2994,11 +3022,10 @@ Il s’agit du référentiel officiel permettant de s’assurer qu’un site d�
     setBreadcrumb([{"label":"Orange Boosted"}]);
 });</script>
 
-<h2 id="boosted" lang="en">Orange Boosted</h2>
-<h3 id="pr-sentation">Présentation</h3>
+<h2 id="pr-sentation">Présentation</h2>
 <p>Orange <span lang="en">Boosted</span> est un framework <abbr>HTML</abbr>, <abbr>CSS</abbr> et Javascript basé sur le très populaire <span lang="en"><a href="http://getbootstrap.com/">Twitter Boostrap</a></span>.
 Il permet la mise en place rapide d’un site web responsive et accessible aux couleurs de la charte Orange.</p>
-<h3 id="pourquoi-l-utiliser-">Pourquoi l’utiliser ?</h3>
+<h2 id="pourquoi-l-utiliser-">Pourquoi l’utiliser ?</h2>
 <ul>
 <li>Basé sur <span lang="en"><a href="http://getbootstrap.com/">Twitter Boostrap</a></span></li>
 <li>À la charte Orange, la Brand</li>
@@ -3007,7 +3034,7 @@ Il permet la mise en place rapide d’un site web responsive et accessible aux c
 <li>Illustré de pages d’exemples</li>
 <li><span lang="en">Open source</span> sous Licence <abbr lang="en">MIT</abbr></li>
 </ul>
-<h3 id="site-officiel">Site officiel</h3>
+<h2 id="site-officiel">Site officiel</h2>
 <p><span lang="en"><a href="http://boosted.orange.com/">Orange Boosted with Bootstrap</a></span></p>
 <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples.
  Copyright (C) 2016  Orange SA
