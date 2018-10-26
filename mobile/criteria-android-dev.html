@@ -124,14 +124,21 @@
 });</script>
 
 <p><span data-menuitem="criteria-android"></span></p>
-<p>Ce guide a pour objectif de présenter les différentes options d’accessibilité du SDK Android.  À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle de Google. Des exemples de codes sont aussi présents pour illustrer les propos.</p>
+<p>Ce guide a pour objectif de présenter les différentes options d’accessibilité du <abbr>SDK</abbr> Android. À travers différentes catégories, ce guide explique comment utiliser les attributs et méthodes d’accessibilité et propose des liens vers la documentation officielle de Google. Des exemples de codes sont aussi présents pour illustrer les propos.</p>
 <h2 id="alternatives-textuelles">Alternatives textuelles</h2>
-<p>*<em>Description&nbsp;: *</em>  </p>
+<p><strong>Description&nbsp;:</strong>  </p>
 <p>Sous Android, la vocalisation d’un élément s’effectue à travers un attribut, à savoir le <code>contentDescription</code>. Cet attribut qui accepte une simple chaîne de caractère en paramètre (et donc internationalisable) redéfinit complètement le texte qui sera lu par le service d’accessibilité et notamment <span lang="en">TalkBack</span>. Cela permet d’avoir un texte de composant plus explicite que celui affiché à l’écran. Par exemple, dans le cas d’un bouton dont le titre est «&nbsp;OK&nbsp;», on pourra indiquer que le bouton sert à valider un choix.  </p>
 <p>Le <code>contentDescription</code> doit aussi être utilisé sur les éléments <i lang="en">custom</i> pour indiquer leur nature. Par exemple, un <code>LinearLayout</code> que l’on rendrait cliquable doit avoir un <code>contentDescription</code> de la forme «&nbsp;nom_du_bouton, bouton&nbsp;» (il faut également permettre le focus du bouton pour l’accessibilité, voir la section correspondante).  </p>
 <p>À noter que le <code>contentDescription</code> est disponible sous tout élément qui hérite de <code>View</code>. Il est donc possible de positionner un <code>contentDescription</code> sur une <code>TextView</code> par exemple, comme montré dans la section «&nbsp;guide d’accessibilité – alternative textuelle – abréviations, dates et heures&nbsp;».  </p>
-<p>*<em>Exemples&nbsp;: *</em>   </p>
-<p>Exemple simple (internationalisé)&nbsp;:<br><code>myTextView.setContentDescription(getString(R.string.criteria_alt_ex1_cd_txt2));</code></p>
+<p><strong>Exemples&nbsp;:</strong>   </p>
+<p>Exemple simple (internationalisé)&nbsp;:</p>
+<pre><code class="xml">&lt;TextView
+…
+android:id="@+id/myTextviewId"
+android:contentDescription="@string/criteria_alt_ex1_cd_txt2"
+&#47;&gt;</code></pre><pre>
+<p><code class="java">myTextView = (TextView) findViewById(R.id.myTextviewId);
+myTextView.setContentDescription(getString(R.string.criteria_alt_ex1_cd_txt2));</code></pre><pre><code class="kotlin">myTextViewId.contentDescription = getString(R.string.criteria_alt_ex1_cd_txt2)</code></pre></p>
 <p>Indiquer l’état et la nature de TabHost (non internationalisé)&nbsp;:  </p>
 <pre><code>private class TabHostListener implements TabHost.OnTabChangeListener {
     [...]
@@ -153,12 +160,12 @@ private void setContentDescription(TabHost mTabHost, String[] mTabsLabel) {
     }
 }</code></pre>
 
-<p>*<em>Lien&nbsp;: *</em></p>
+<p><strong>Lien&nbsp;:</strong></p>
 <ul>
 <li><a href="http://developer.android.com/reference/android/view/View.html#attr_android:contentDescription"><code>contentDescription</code></a></li>
 </ul>
 <h2 id="masquer-des-l-ments-l-accessibilit-">Masquer des éléments à l’accessibilité</h2>
-<p>*<em>Description&nbsp;: *</em>  </p>
+<p><strong>Description&nbsp;:</strong>  </p>
 <p>Il est possible via un attribut d’accessibilité de masquer des éléments aux outils d’accessibilité (<span lang="en">TalkBack</span> par exemple). Par extension, il est possible de forcer certains éléments à être visibles aux outils d’accessibilité.<br><code>ImportantForAccessibility</code>&nbsp;: suivant la valeur de l’attribut, cela permet d’indiquer qu’un élément est visible ou non de l’<abbr>API</abbr> d’accessibilité.  </p>
 <ul>
 <li><code>auto</code> (0)&nbsp;: valeur par défaut, c’est le système qui décide. Par exemple, un <code>Button</code> aura sa valeur par défaut à 1 (<i lang="en">yes</i>) et un <code>LinearLayout</code> à 2 (<i lang="en">no</i>).</li>
@@ -167,40 +174,40 @@ private void setContentDescription(TabHost mTabHost, String[] mTabsLabel) {
 <li><code>noHideDescendants</code>  (4)&nbsp;: la vue n’est pas importante pour l’accessibilité, mais également toutes ses vues filles. Cela permet de cacher tous les éléments d’une vue à l’accessibilité en une seule fois. Très utile sur les éléments custom.  </li>
 </ul>
 <p>À noter&nbsp;: l’attribut «&nbsp;<code>importantForAccessibility</code>&nbsp;» est disponible pour tout élément qui hérite de <code>View</code>.</p>
-<p>*<em>Exemples&nbsp;: *</em></p>
+<p><strong>Exemples&nbsp;:</strong></p>
 <p>Depuis le <abbr>xml</abbr>&nbsp;: 
 <code>android:importantForAccessibility=&quot;no&quot;</code></p>
 <p>Depuis le code&nbsp;:
 <code>myView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS);</code></p>
-<p>*<em>Lien&nbsp;: *</em>     </p>
+<p><strong>Lien&nbsp;:</strong>     </p>
 <ul>
 <li><a href="https://developer.android.com/reference/android/view/View.html#setImportantForAccessibility%28int%29"><code>importantForAccessibility</code></a></li>
 </ul>
 <h2 id="d-clencher-une-vocalisation">Déclencher une vocalisation</h2>
-<p>*<em>Description&nbsp;: *</em>  </p>
+<p><strong>Description&nbsp;:</strong>  </p>
 <p>Il est très facile de déclencher des vocalisations avec <span lang="en">TalkBack</span>. Déclencher une vocalisation est très utile dans le cas de contenu dynamique, au même titre que les <code>LiveRegion</code> (voir la section correspondante). Pour déclencher une vocalisation, il suffit de faire appel à la méthode <code>announceForAccessibility</code> en lui passant en paramètre l’<code>id</code> de la chaîne de caractères à vocaliser.  </p>
 <p>À noter&nbsp;: la méthode <code>announceForAccessibility</code> est disponible sur tout élément qui hérite de <code>View</code> et se fait dans la langue du système.</p>
 <p>Attention: nous parlons ici de vocalisation <span lang="en">TalkBack</span> et non pas de <abbr>TTS</abbr> (Text To Speech) qui peut fonctionner indépendamment du statut de <span lang="en">TalkBack</span>.</p>
-<p>*<em>Exemple&nbsp;: *</em></p>
+<p><strong>Exemple&nbsp;:</strong></p>
 <p>Il est fréquent de tester la version d’Android avant de déclencher une vocalisation <span lang="en">TalkBack</span>. En effet, <code>announceForAccessibility</code> ne fonctionne que depuis l’arrivée d’Android <i lang="en">Jelly Bean</i>.</p>
 <pre><code class="java">if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
     getView().announceForAccessibility(getString(R.string.criteria_contentchange_ex1_announce));
 }</code></pre>
 
-<p>*<em>Lien&nbsp;: *</em></p>
+<p><strong>Lien&nbsp;:</strong></p>
 <ul>
 <li><a href="https://developer.android.com/reference/android/view/View.html#announceForAccessibility%28java.lang.CharSequence%29"><code>announceForAccessibility</code></a></li>
 </ul>
 <h2 id="d-tecter-si-span-lang-en-talkback-span-est-activ-">Détecter si <span lang="en">TalkBack</span> est activé</h2>
-<p>*<em>Description&nbsp;: *</em> </p>
+<p><strong>Description&nbsp;:</strong> </p>
 <p>Sous Android, il est possible de savoir si l’<abbr>API</abbr> d’accessibilité est activée, et par extension de savoir si <span lang="en">TalkBack</span> est activé.</p>
-<p>*<em>À l’usage&nbsp;: *</em> </p>
+<p><strong>À l’usage&nbsp;:</strong> </p>
 <pre><code>AccessibilityManager am = (AccessibilityManager) context.getSystemService(ACCESSIBILITY_SERVICE);  
 boolean isAccessibilityEnabled = am.isEnabled();</code></pre>
 
 
 <h2 id="r-gions-i-lang-en-live-i-contenu-dynamique-">Régions <i lang="en">live</i> (contenu dynamique)</h2>
-<p>*<em>Description&nbsp;: *</em></p>
+<p><strong>Description&nbsp;:</strong></p>
 <p>Il est possible de spécifier à une vue qu’elle est une région «&nbsp;<i lang="en">live</i>&nbsp;», c’est-à-dire que son contenu est susceptible d’être modifié dynamiquement et qu’elle doit dans ce cas prévenir l’<abbr>API</abbr> d’accessibilité. Cela aura pour conséquence de générer des vocalisations avec <span lang="en">TalkBack</span>. Un exemple type d’utilisation&nbsp;: sur un formulaire, si l’utilisateur fait une erreur et qu’un message d’erreur apparaît, la vue contenant le message doit être définie comme une région «&nbsp;<i lang="en">live</i>&nbsp;».</p>
 <p>Il faut passer par la méthode <code>setAccessibilityLiveRegion</code> qui prend en paramètre un mode pour la région <i lang="en">live</i>. Il existe 3 modes&nbsp;:  </p>
 <ul>
@@ -209,42 +216,42 @@ boolean isAccessibilityEnabled = am.isEnabled();</code></pre>
 <li><code>ACCESSIBILITY_LIVE_REGION_ASSERTIVE</code>&nbsp;: en cas de changement dans la vue, des vocalisations seront effectuées sur les changements. Ces vocalisations sont «&nbsp;<i lang="en">rude</i>&nbsp;»&nbsp;: elles sont prioritaires et immédiatement vocalisées.  </li>
 </ul>
 <p>À noter&nbsp;: la méthode <code>setAccessibilityLiveRegion</code> est disponible sur tout élément qui hérite de <code>View</code>.</p>
-<p>*<em>Exemples&nbsp;: *</em></p>
+<p><strong>Exemples&nbsp;:</strong></p>
 <pre><code>&lt;TextView
    [...]
    android:accessibilityLiveRegion="polite" /&gt;</code></pre>
 
-<p>*<em>Lien&nbsp;: *</em></p>
+<p><strong>Lien&nbsp;:</strong></p>
 <ul>
 <li><a href="https://developer.android.com/reference/android/view/View.html#setAccessibilityLiveRegion%28int%29"><code>setAccessibilityLiveRegion</code></a></li>
 </ul>
 <h2 id="g-rer-l-ordre-de-lecture-span-lang-en-talkback-span-">Gérer l’ordre de lecture (<span lang="en">TalkBack</span>)</h2>
-<p>*<em>Description&nbsp;: *</em>  </p>
+<p><strong>Description&nbsp;:</strong>  </p>
 <p>L’ordre du focus de la synthèse vocale par défaut prend en compte plusieurs paramètres&nbsp;: la lecture «&nbsp;logique&nbsp;», (en France) soit de gauche à droite et de haut en bas, et la lecture du <abbr>xml</abbr> (ordre de déclaration des éléments). Il est tout à fait possible de redéfinir cet ordre de lecture avec deux outils&nbsp;:  </p>
 <ul>
 <li><code>accessibilityTraversalAfter</code>&nbsp;: prend un id en paramètre et permet de spécifier à la vue qu’elle doit être décrite par l’accessibilité après la vue passée en paramètre.</li>
 <li><code>accessibilityTraversalBefore</code>&nbsp;: prend un id en paramètre et permet de spécifier à la vue qu’elle doit être décrite par l’accessibilité avant la vue passée en paramètre.</li>
 </ul>
 <p>À noter&nbsp;: ces attributs peuvent être utilisés directement dans le <abbr>xml</abbr> mais également dans le code via les méthodes <code>setAccessibilityTraversalAfter</code> et <code>setAccessibilityTraversalBefore</code>. Ces méthodes sont disponibles pour tout élément qui hérite de <code>View</code>.</p>
-<p>*<em>Exemple&nbsp;: *</em> </p>
+<p><strong>Exemple&nbsp;:</strong> </p>
 <pre><code class="java">volupButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.remote0).getId());
 voldownButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.volup).getId());
 chaineplusButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.voldown).getId());
 chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaineplus).getId());</code></pre>
 
-<p>*<em>Liens&nbsp;: *</em>      </p>
+<p><strong>Liens&nbsp;:</strong>      </p>
 <ul>
 <li><a href="https://developer.android.com/reference/android/view/View.html#setAccessibilityTraversalAfter%28int%29"><code>setAccessibilityTraversalAfter</code></a></li>
 <li><a href="https://developer.android.com/reference/android/view/View.html#setAccessibilityTraversalBefore%28int%29"><code>setAccessibilityTraversalBefore</code></a></li>
 </ul>
 <h2 id="formulaires">Formulaires</h2>
-<p>*<em>Description&nbsp;: *</em>  </p>
+<p><strong>Description&nbsp;:</strong>  </p>
 <p>Il est important que les champs de formulaire soient liés à un label. Il existe 2 grandes techniques pour réaliser cette liaison&nbsp;:</p>
 <ul>
 <li><code>labelFor</code>&nbsp;: permet de spécifier à une vue qu’elle est le label d’une autre vue. Cette méthode prend en paramètre l’<code>id</code> de la vue que l’on labellise. On peut utiliser cette méthode avec quasiment tout type de champ de formulaire. Utilisable depuis le <abbr>xml</abbr> <code>android:labelFor</code> ou le code <code>setLabelFor</code>. <code>LabelFor</code> est utilisable depuis tout élément qui hérite de <code>View</code>.</li>
 <li><code>hint</code>&nbsp;: pour les <code>EditText</code> ou <code>TextView</code>. Permet d’ajouter un texte d’exemple quand le champ de texte est vide. Cette méthode ne marche que pour les <code>TextView</code>. Prend en paramètre l’<code>id</code> d’une chaîne de caractère. Utilisable depuis le <abbr>xml</abbr> <code>android:hint</code> ou le code <code>setHint</code>.</li>
 </ul>
-<p>*<em>Exemples&nbsp;: *</em></p>
+<p><strong>Exemples&nbsp;:</strong></p>
 <p><code>LabelFor</code> dans le <abbr>xml</abbr>&nbsp;: </p>
 <pre><code>&lt;TextView
     [...]
@@ -257,27 +264,27 @@ chainemoinsButton.setAccessibilityTraversalAfter(myView.findViewById(R.id.chaine
   [...]
    android:hint="@string/criteria_form_ex1_placeholder" /&gt;</code></pre>
 
-<p>*<em>Liens&nbsp;: *</em></p>
+<p><strong>Liens&nbsp;:</strong></p>
 <ul>
 <li><a href="https://developer.android.com/reference/android/view/View.html#setLabelFor%28int%29"><code>setLabelFor</code></a></li>
 <li><a href="https://developer.android.com/reference/android/widget/TextView.html#setHint%28java.lang.CharSequence%29"><code>setHint</code></a></li>
 </ul>
 <h2 id="taille-des-textes">Taille des textes</h2>
-<p>*<em>Description&nbsp;: *</em>  </p>
+<p><strong>Description&nbsp;:</strong>  </p>
 <p>Afin de permettre à l’option «&nbsp;grands caractères&nbsp;» d’interagir correctement avec l’application, plusieurs points sont à respecter durant les développements.</p>
 <ul>
 <li>Utiliser une taille de police dynamique&nbsp;: le «&nbsp;sp&nbsp;». Cette unité, spécifique à Android, permet d’obtenir une taille de police en fonction de la densité de pixel de l’écran. Il est plus que recommandé de l’utiliser, ne serait-ce que pour obtenir un design uniforme sur tous les types de <i lang="en">devices</i> Android.</li>
 <li>Gérer les débordements de contenu&nbsp;: une erreur courante est d’utiliser une taille de texte dynamique («&nbsp;sp&nbsp;» donc) mais de ne pas faire attention au conteneur. Si le texte grossit, le conteneur doit en faire autant pour ne pas qu’il y ait de débordement. On peut parfaitement jouer avec le <code>min-height</code> et le <code>height</code> des conteneurs pour obtenir un résultat correct (un <code>height</code> en <code>wrap_content</code> permet de laisser au système le soin de s’adapter).</li>
 </ul>
-<p>*<em>Lien&nbsp;: *</em></p>
+<p><strong>Lien&nbsp;:</strong></p>
 <ul>
 <li><a href="https://www.google.com/design/spec/style/typography.html#typography-styles">typographie sous Android</a></li>
 </ul>
 <h2 id="-v-nements-d-accessibilit-i-lang-en-custom-views-i-">Événements d’accessibilité &amp; <i lang="en">custom views</i></h2>
-<p>*<em>Description&nbsp;: *</em> </p>
+<p><strong>Description&nbsp;:</strong> </p>
 <p>Il existe sous Android un bon nombre d’événements liés à l’<abbr>API</abbr> d’accessibilité. Vous pouvez manipuler ces événements au même titre que d’autres événements. Ils permettent d’enrichir des composants <i lang="en">custom</i> insuffisamment accessibles. L’utilisation des événements d’accessibilité est assez rare dans les applications non dédiées à l’accessibilité, les autres options étant généralement suffisantes. Cependant, il faut savoir qu’ils existent et permettent de surcharger la vocalisation d’un composant.  </p>
 <p>Pour plus d’informations, nous vous invitons à regarder les liens ci-dessous.</p>
-<p>*<em>Exemple&nbsp;: *</em></p>
+<p><strong>Exemple&nbsp;:</strong></p>
 <p>Dans cet exemple, on intercepte les événements d’accessibilité. En fonction de leur type (un texte a changé dans la vue ou <span lang="en">TalkBack</span> a mis le focus sur le composant), nous construisons une vocalisation à destination de <span lang="en">TalkBack</span>.</p>
 <pre><code class="java">@Override
 @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
@@ -304,20 +311,20 @@ public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
   return result;
 }</code></pre>
 
-<p>*<em>Liens&nbsp;: *</em></p>
+<p><strong>Liens&nbsp;:</strong></p>
 <ul>
 <li><a href="http://developer.android.com/reference/android/view/accessibility/AccessibilityEvent.html"><code>AccessibilityEvents</code></a></li>
 <li><a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#custom-views">Construire une vue custom accessible</a></li>
 </ul>
 <h2 id="-i-lang-en-webview-i-"><i lang="en">WebView</i></h2>
-<p>*<em>Description&nbsp;: *</em> </p>
+<p><strong>Description&nbsp;:</strong> </p>
 <p>Les <code>WebView</code> ont un traitement un peu particulier sous Android. Pour commencer, si on veut qu’une page soit accessible, il faut que le contenu HTML le soit, à savoir qu’il respecte les normes internationales sur le sujet&nbsp;: les WCAG2. Pour connaître ces règles et apprendre les techniques de développement pour un web accessible, nous vous invitons à visiter la section de notre site consacrée au sujet&nbsp;: <a href="../web/index.html">recommandations accessibilité pour le web</a>.  </p>
 <p>Côté Android, il faut s’assurer que la <i lang="en">WebView</i> autorise le JavaScript&nbsp;: <code>mWebView.getSettings().setJavaScriptEnabled(true);</code><br>Dans ces conditions, la page affichée à travers la <code>WebView</code>  réagit convenablement à l’<abbr>API</abbr> d’accessibilité. </p>
 <h2 id="vocalisation-des-listes">Vocalisation des listes</h2>
-<p>*<em>Description&nbsp;: *</em> </p>
+<p><strong>Description&nbsp;:</strong> </p>
 <p>Il arrive parfois que les listes soient mal vocalisées&nbsp;: la synthèse vocale tente de vocaliser toute la liste en une seule fois (au moins ce qui est affiché à l’écran dans le cas de listes longues). C’est notamment le cas lorsque l’on utilise des <code>RecyclerView</code>. Pour pallier ce problème, une solution simple existe. Il suffit de positionner l’attribut <code>focusable</code> à <code>true</code> pour chaque item de la liste. Cela a pour effet de forcer la synthèse vocale (<span lang="en">TalkBack</span>) à lire les items un par un.</p>
 <h2 id="navigation-au-focus-clavier-">Navigation au focus (clavier)</h2>
-<p>*<em>Description&nbsp;: *</em></p>
+<p><strong>Description&nbsp;:</strong></p>
 <p>Pour gérer la navigation au focus, il faut s’assurer de 3 choses&nbsp;:</p>
 <ul>
 <li>Permettre le focus sur les éléments interactifs&nbsp;: la navigation au focus ne concerne que les éléments interactifs. Si, par exemple, votre application possède des vues <i lang="en">custom</i> cliquables, il faut s’assurer que ces vues soient focusables en positionnant l’attribut <code>focusable</code> à <code>true</code>.</li>
@@ -326,7 +333,7 @@ public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
 </ul>
 <p>La plupart du temps, seuls les point 1 et 2 sont à prendre la compte. En effet, le système Android est capable de déterminer assez précisément les positions des éléments les uns par rapport aux autres et donc de fournir un ordre de lecture au clavier logique et cohérent.</p>
 <p>À noter&nbsp;: <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code>, <code>nextFocusLeft</code>, <code>focusable</code> ainsi que d’autres options de gestion du focus sont accessibles directement dans le <abbr>xml</abbr> ou dans le code à travers les méthodes correspondantes.</p>
-<p>*<em>Exemple&nbsp;: *</em></p>
+<p><strong>Exemple&nbsp;:</strong></p>
 <p>Exemple de sélecteur pour <code>TabHost</code> qui prend en compte l’état <code>state_focused</code> :</p>
 <pre><code>&lt;selector xmlns:android="http://schemas.android.com/apk/res/android"&gt;
     &lt;!-- Non focused states --&gt;
@@ -347,7 +354,7 @@ public boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent event) {
     &lt;item android:state_focused="true" android:state_selected="true"  android:state_pressed="true" android:drawable="@drawable/tab_selected_pressed_tab_selector" /&gt;
 &lt;/selector&gt;</code></pre>
 
-<p>*<em>Lien&nbsp;: *</em></p>
+<p><strong>Lien&nbsp;:</strong></p>
 <ul>
 <li><a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#focus-nav">Gestion du focus sous Android</a></li>
 </ul>
